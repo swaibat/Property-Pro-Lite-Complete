@@ -1,0 +1,12 @@
+@import "./parts/animation.css";
+@import "./parts/loader.css";
+@import "./parts/root.css";
+@import "./parts/global.css";
+@import "./parts/components.css";
+@import "./parts/flexbox.css";
+@import "./parts/fonts.css";
+@import "./parts/utilities.css";
+@import "./parts/spacing.css";
+@import "./parts/media.css";
+@import "./parts/colors.css";
+@import "./parts/analytics.css";

@@ -1,0 +1,75 @@
+/* ========================[ flex-box ]=====================*/
+
+.d-flex {
+  display: flex;
+}
+
+.flex-y {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-x {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-x-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flex-y-start {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-y-center {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-y-end {
+  display: flex;
+  align-content: flex-end;
+}
+
+.flex-strech {
+  display: flex;
+  align-items: stretch;
+}
+
+.justify-btn {
+  display: flex;
+  justify-content: space-between !important;
+}
+
+.justify-around {
+  display: flex;
+  justify-content: space-around !important;
+}

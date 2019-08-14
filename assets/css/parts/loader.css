@@ -1,0 +1,75 @@
+/* page loader css*/
+
+.loader #navAccordion {
+	background: white ! important;
+}
+
+.loader #navAccordion .active {
+	background: #241e1e1a !important;
+}
+
+@keyframes placeHolderShimmer {
+	0% {
+		background-position: -468px 0
+	}
+	100% {
+		background-position: 468px 0
+	}
+}
+.loader .logo a,.loader li,.loader button,.loader .green,.loader h2,.loader .form-input,.loader img,.loader .card .btn,.loader .price,
+.loader p,.loader h4,.loader span,.loader i,
+.loader #navAccordion i,.loader .active,.loader .d-flex.float-right.margin-t-2 a,.loader h1,.loader b,.loader li q{
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	animation-name: placeHolderShimmer;
+	animation-timing-function: linear;
+	background: #edf3f6;
+	background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+	background-size: auto auto;
+	background-size: 800px 104px;
+	border: none ! important;
+	color: transparent ! important;
+	z-index: 1001 ! important;
+    border-radius: 5px;
+}
+
+.loader #navbarDropdown {
+	border-radius: 50%;
+	width: 35px;
+	height: 35px;
+	/* margin-right: 10px; */
+}
+
+.loader .hamburger-toggle * {
+	visibility: hidden ! important;
+	padding: 3px;
+}
+
+.loader .table-striped tbody tr:nth-of-type(2n+1),
+.loader .alert * {
+	background: none;
+}
+
+.loader .progress *,
+.loader .table img,
+.loader #navbarDropdown img,
+.loader span * {
+	visibility: hidden;
+}
+
+.loader .dot {
+	visibility: hidden ! important;
+}
+
+.loader .wrapper canvas,.loader img {
+	visibility: hidden;
+}
+
+.loader #bg{
+    display: none;
+}
+.loader a{
+	color: transparent !important;
+}
+

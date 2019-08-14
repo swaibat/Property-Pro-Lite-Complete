@@ -1,0 +1,209 @@
+/* ========================[ fonts ]=====================*/
+
+@import url('https://fonts.googleapis.com/css?family=Barlow:300,400,500');
+
+/* my custom font */
+@font-face {
+    font-family: 'property-pro';
+    src:  url('../../fonts/property-pro.eot?wf0l53');
+    src:  url('../../fonts/property-pro.eot?wf0l53#iefix') format('embedded-opentype'),
+      url('../../fonts/property-pro.ttf?wf0l53') format('truetype'),
+      url('../../fonts/property-pro.woff?wf0l53') format('woff'),
+      url('../../fonts/property-pro.svg?wf0l53#property-pro') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+/* my icons */
+
+i {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'property-pro' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .pro-home-lite:before {
+    content: "\e900";
+  }
+  .pro-home3-lite:before {
+    content: "\e902";
+  }
+  .pro-pencil-lite:before {
+    content: "\e905";
+  }
+  .pro-droplet-lite:before {
+    content: "\e90b";
+  }
+  .pro-image-lite:before {
+    content: "\e90d";
+  }
+  .pro-images-lite:before {
+    content: "\e90e";
+  }
+  .pro-camera-lite:before {
+    content: "\e90f";
+  }
+  .pro-podcast-lite:before {
+    content: "\e91c";
+  }
+  .pro-feed-lite:before {
+    content: "\e91d";
+  }
+  .pro-file-empty-lite:before {
+    content: "\e924";
+  }
+  .pro-files-empty-lite:before {
+    content: "\e925";
+  }
+  .pro-file-text2-lite:before {
+    content: "\e926";
+  }
+  .pro-file-picture-lite:before {
+    content: "\e927";
+  }
+  .pro-stack-lite:before {
+    content: "\e92e";
+  }
+  .pro-folder-lite:before {
+    content: "\e92f";
+  }
+  .pro-ticket-lite:before {
+    content: "\e939";
+  }
+  .pro-phone-lite:before {
+    content: "\e942";
+  }
+  .pro-phone-hang-up-lite:before {
+    content: "\e943";
+  }
+  .pro-envelop-lite:before {
+    content: "\e945";
+  }
+  .pro-location-lite:before {
+    content: "\e947";
+  }
+  .pro-location2-lite:before {
+    content: "\e948";
+  }
+  .pro-alarm-lite:before {
+    content: "\e950";
+  }
+  .pro-bell-lite:before {
+    content: "\e951";
+  }
+  .pro-database-lite:before {
+    content: "\e964";
+  }
+  .pro-bubbles-lite:before {
+    content: "\e96c";
+  }
+  .pro-bubbles2-lite:before {
+    content: "\e96d";
+  }
+  .pro-bubbles3-lite:before {
+    content: "\e96f";
+  }
+  .pro-bubbles4-lite:before {
+    content: "\e970";
+  }
+  .pro-spinner9-lite:before {
+    content: "\e982";
+  }
+  .pro-search-lite:before {
+    content: "\e986";
+  }
+  .pro-equalizer-lite:before {
+    content: "\e992";
+  }
+  .pro-cog-lite:before {
+    content: "\e994";
+  }
+  .pro-stats-dots-lite:before {
+    content: "\e99b";
+  }
+  .pro-stats-bars-lite:before {
+    content: "\e99c";
+  }
+  .pro-fire-lite:before {
+    content: "\e9a9";
+  }
+  .pro-bin-lite:before {
+    content: "\e9ac";
+  }
+  .pro-bin2-lite:before {
+    content: "\e9ad";
+  }
+  .pro-power-lite:before {
+    content: "\e9b5";
+  }
+  .pro-switch-lite:before {
+    content: "\e9b6";
+  }
+  .pro-sphere-lite:before {
+    content: "\e9c9";
+  }
+  .pro-earth-lite:before {
+    content: "\e9ca";
+  }
+  .pro-link-lite:before {
+    content: "\e9cb";
+  }
+  .pro-attachment-lite:before {
+    content: "\e9cd";
+  }
+  .pro-eye-lite:before {
+    content: "\e9ce";
+  }
+  .pro-star-empty-lite:before {
+    content: "\e9d7";
+  }
+  .pro-star-half-lite:before {
+    content: "\e9d8";
+  }
+  .pro-star-full-lite:before {
+    content: "\e9d9";
+  }
+  .pro-heart-lite:before {
+    content: "\e9da";
+  }
+  .pro-warning-lite:before {
+    content: "\ea07";
+  }
+  .pro-plus-lite:before {
+    content: "\ea0a";
+  }
+  .pro-minus-lite:before {
+    content: "\ea0b";
+  }
+  .pro-info-lite:before {
+    content: "\ea0c";
+  }
+  .pro-cross-lite:before {
+    content: "\ea0f";
+  }
+  .pro-checkmark-lite:before {
+    content: "\ea10";
+  }
+  .pro-enter-lite:before {
+    content: "\ea13";
+  }
+  .pro-exit-lite:before {
+    content: "\ea14";
+  }
+  .pro-ctrl-lite:before {
+    content: "\ea50";
+  }
+  .pro-mail4-lite:before {
+    content: "\ea86";
+  }
+  .pro-onedrive-lite:before {
+    content: "\eaaf";
+  }
+  
