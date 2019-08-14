@@ -1,0 +1,159 @@
+/* ========================[ media queries ]=====================*/
+
+/*  Small devices*/
+
+@media (max-width: 576px) {
+    .card {
+        width: 100% !important;
+    }
+    .left-cards{
+        width: 100% !important;
+    }
+    .account-img{
+        display: none;
+    }
+    aside button, aside input, aside select, aside a {
+        width: 100%;
+        max-width: 100%;
+        padding: .9em 1.4em .9em .8em;
+    }
+    aside button {
+        width: auto !important;
+        padding: .9em 1.4em .9em .8em;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 46.1%;
+    }
+    .left-cards{
+        width: 46.1%;
+    }
+    
+    .logo a {
+        font-size: 25px;
+        background: white;
+        color: #1cbf68;
+        padding: 3px 12px;
+        border-radius: 5px;
+        margin-top: .2rem !important;
+    }
+    .left-side h2 {
+        display: block;
+      }
+    .landing .right-side {
+        display: none;
+    }
+    .landing .left-side {
+        margin-top: 3rem;
+        width: 100%;
+        height: 200px;
+        text-align: center;
+    }
+    .landing .right-side {
+        margin-top: 3rem;
+        width: 100%;
+    }
+    .page-container {
+        margin: 4rem 0rem;
+    }
+    .navbar.toggle-class {
+    width: 10.5rem;
+    z-index: 1030;
+    }
+    li span {
+        font-size: 12px;
+        color: #6e6969;
+    }
+    #avatar span,
+    .logo a span {
+        display: none;
+    }
+    .product-form form,.product-form .preview-img {
+        width: auto !important;
+    }
+    #results img:first-child{
+        width: 98.5%;
+        height: 300px;
+        margin-top: -.5rem;
+      }
+    .card.featured{
+        display: none;
+      }
+    .page p,.margin-x-3.margin-t-n5 span{
+          display: none;
+    }
+    .page span {
+        font-size: 2rem;
+    }
+    /* side navigation */
+    .navbar {
+        margin-top: 3.3rem;
+        position: absolute;
+        background: white;
+        min-height: 100%;
+        box-shadow: var(--shadow);
+        overflow: auto;
+        width: 0px;
+        padding: 1.5rem 0 0 1rem;
+        margin-left: -1rem;
+    }
+    .mobile-view {
+        display: inline;
+    }
+    .drop-content {
+        margin: 3.3rem 0 0 -5.9rem !important;
+    }
+    .card {
+        width: 46.1%;
+    }
+    .product-form{
+        flex-direction: column !important;
+    }
+    #bg {
+        clip-path: polygon(100% 0, 100% 53%, 20% 100%, 0 100%, 0 0);
+    }
+    .detail-img {
+        width: 100%;
+    }
+    .sm-100 {
+        width: 100% !important;
+    }
+    .form-grp {
+        flex-direction: column;
+    }
+    .product {
+        flex-direction: column;
+    }
+    .prdt-dtls {
+        width: 100%;
+    }
+    .detail-img img {
+        width: 100%;
+    } 
+    .humberger{
+        font-size: 26px;
+    }
+    .sub-container{
+        margin-left: 0rem;
+        margin-right: 0rem;
+        background: #ffffff;
+        border-radius: var(--border-radius);
+        padding:.5rem;
+        margin-bottom: 2rem;
+      }
+      .page-title{
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+}
+
+@media (min-width: 1200px) {
+    .card {
+        width: 23%;
+    }
+    .product-form .preview-img {
+        width: 45%;
+    }
+}

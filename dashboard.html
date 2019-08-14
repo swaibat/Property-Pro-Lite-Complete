@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="assets/css/app.css" rel="stylesheet">
+    <title>Property-lite</title>
+</head>
+<body id="loader" class="loader ">
+    <div id="bg" class="bg"></div>
+    <!-- start of navigation -->
+    <nav class="flex-x shadow padding-y-1 fixed-top full-width">
+        <div class="logo margin-l-3 margin-t-2"><a href="index.html">P<span class="tracking-in-contract">roperty Pro</span></a></div>
+        <!-- start of sidenav -->
+        <ul class="navbar fixed-left" id="collapse-menu">
+            <div class="flex-center">
+                <img class="circle" src="./assets/img/user.svg" height="85" width="85" alt="user">
+            </div>
+            <ul class="margin-x-3">
+                <li class="nav-item active"><a href="dashboard.html"><i class="pro-home-lite margin-r-2"></i>Dashboard</a></li>
+                <li class="nav-item"><a href="postad.html"><i class="pro-plus-lite margin-r-2 sm-font"></i>Post ad</a></li>
+                <li class="nav-item"><a href="myads.html"><i class="pro-stack-lite margin-r-2"></i>My ads</a></li>
+                <li class="nav-item"><a href="#"><i class="pro-bubbles3-lite margin-r-2"></i>Messages</a></li>
+                <li class="nav-item"><a href="#"><i class="pro-bell-lite margin-r-2"></i>Notifications</a></li>
+                <li class="nav-item"><a href="index.html"><i class="pro-switch-lite margin-r-2"></i> Logout</a></li>
+            </ul>
+        </ul>
+        <div class="margin-l-auto margin-r-3 flex-x">
+            <button id="avatar" class="collapsible padding-t-1 d-flex btn">
+                <span class="padding-r-2 margin-t-1">My account</span>
+                <img class="circle" src="./assets/img/user.svg" height="35" width="35" alt="user">
+            </button>
+            <ul class="drop-content swing-in-top-fwd white d-none padding-2 shadow">
+                <li class="padding-y-2"><i class="pro-enter-lite margin-x-2"></i>my account</li>
+                <li class="padding-y-2"><a><i class="pro-info-lite margin-x-2"></i>profile</a></li>
+                <li class="padding-y-2"><a><i class="pro-cog-lite margin-x-2"></i>Setting</a></li>
+            </ul>
+            <button type="button" onclick="toggle()" class="btn mobile-view"><span class="humberger">&#8942;</span></button>
+        </div>
+    </nav>
+    <!-- //navigation -->
+    <!-- start of main content -->
+    <main role="main">
+        <div class="padding-1 page-container ">
+            <h3 class="page-title"><i class="pro-home-lite margin-r-2"></i> Dashboard</h3>
+            <div class="sub-container transparent">
+                    <div class="analytics-holder">
+                            <div class="analytics shadow white border-radius">
+                                <h4 class="analytics-title">My property Overview</h4>
+                                <div class="d-flex">
+                                    <div class="analytics-chart">
+                                        <div class="analytics-colchart">
+                                            <div class="analytics-colgroup">
+                                                <div class="analytics-col">
+                                                    <div class="analytics-bar" style="height: 70%;"></div>
+                                                </div>
+                                                <div class="analytics-col">
+                                                    <div class="analytics-bar" style="height: 30%;"></div>
+                                                </div>
+                                                <div class="analytics-col">
+                                                    <div class="analytics-bar" style="height: 50%;"></div>
+                                                </div>
+                                                <div class="analytics-col">
+                                                    <div class="analytics-bar" style="height: 90%;"></div>
+                                                </div>
+                                                <div class="analytics-col">
+                                                    <div class="analytics-bar" style="height: 80%;"></div>
+                                                </div>
+                                                <div class="analytics-col">
+                                                    <div class="analytics-bar" style="height: 70%;"></div>
+                                                </div>
+                                                <div class="analytics-col">
+                                                    <div class="analytics-bar" style="height: 30%;"></div>
+                                                </div>
+            
+                                                <div class="analytics-col">
+                                                    <div class="analytics-bar" style="height: 40%;"></div>
+                                                </div>
+                                                <div class="analytics-col">
+                                                    <div class="analytics-bar" style="height: 30%;"></div>
+                                                </div>
+                                                <div class="analytics-col">
+                                                    <div class="analytics-bar" style="height: 20%;"></div>
+                                                </div>
+                                                <div class="analytics-col">
+                                                    <div class="analytics-bar" style="height: 15%;"></div>
+                                                </div>
+                                                <div class="analytics-col">
+                                                    <div class="analytics-bar" style="height: 10%;"></div>
+                                                </div>
+                                                <div class="analytics-col">
+                                                    <div class="analytics-bar" style="height: 25%;"></div>
+                                                </div>
+                                                <div class="analytics-col">
+                                                    <div class="analytics-bar" style="height: 50%;"></div>
+                                                </div>
+            
+                                                <div class="analytics-col">
+                                                    <div class="analytics-bar" style="height: 60%;"></div>
+                                                </div>
+                                                <div class="analytics-col">
+                                                    <div class="analytics-bar" style="height: 35%;"></div>
+                                                </div>
+                                                <div class="analytics-col">
+                                                    <div class="analytics-bar" style="height: 50%;"></div>
+                                                </div>
+                                                <div class="analytics-col">
+                                                    <div class="analytics-bar" style="height: 55%;"></div>
+                                                </div>
+                                                <div class="analytics-col">
+                                                    <div class="analytics-bar" style="height: 80%;"></div>
+                                                </div>
+                                                <div class="analytics-col">
+                                                    <div class="analytics-bar" style="height: 82%;"></div>
+                                                </div>
+                                                <div class="analytics-col">
+                                                    <div class="analytics-bar" style="height: 35%;"></div>
+                                                </div>
+            
+                                                <div class="analytics-col">
+                                                    <div class="analytics-bar" style="height: 20%;"></div>
+                                                </div>
+                                                <div class="analytics-col">
+                                                    <div class="analytics-bar" style="height: 30%;"></div>
+                                                </div>
+                                                <div class="analytics-col">
+                                                    <div class="analytics-bar" style="height: 50%;"></div>
+                                                </div>
+                                                <div class="analytics-col">
+                                                    <div class="analytics-bar" style="height: 90%;"></div>
+                                                </div>
+                                                <div class="analytics-col">
+                                                    <div class="analytics-bar" style="height: 80%;"></div>
+                                                </div>
+                                                <div class="analytics-col">
+                                                    <div class="analytics-bar" style="height: 70%;"></div>
+                                                </div>
+                                                <div class="analytics-col">
+                                                    <div class="analytics-bar" style="height: 35%;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="analytics-metrics">
+                                        <p class="analytics-count">4,815</p>
+                                        <p class="analytics-metric">Bounce rate <span>16%</span></p>
+                                        <p class="analytics-metric">New visitors <span>23%</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-y card-left dash-cards">
+                                <div class="card-left full-width">
+                                    <div class="stat-card shadow ">
+                                        <p class="margin-l-3 margin-t-2">Active Ads</p>
+                                        <h2 class="align-center margin-3">200</h2>
+                                        <b class="btn orange">A</b>
+                                    </div>
+                                    <div class="stat-card shadow ">
+                                        <p class="margin-l-3 margin-t-2">sold Ads</p>
+                                        <h2 class="align-center margin-3 blue-txt">200</h2>
+                                        <b class="btn blue">S</b>
+                                    </div>
+                                </div>
+                                <div class="card-left full-width margin-t-3">
+                                    <div class="stat-card shadow ">
+                                        <p class="margin-l-3 margin-t-2">Ads views</p>
+                                        <h2 class="align-center margin-3">200</h2>
+                                        <b class="btn teal">A</b>
+                                    </div>
+                                    <div class="stat-card shadow ">
+                                        <p class="margin-l-3 margin-t-2">Flagged Ads</p>
+                                        <h2 class="align-center margin-3">200</h2>
+                                        <b class="btn red">F</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="responsive-tables margin-t-4 ">
+                            <h4 class="white padding-2">My Recent Ads </h4>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Type</th>
+                                        <th>image</th>
+                                        <th>price</th>
+                                        <th>status</th>
+                                        <th>operation</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="white">
+                                        <td data-title="image :">
+                                            <a href="product.html"><img class="ad-img shadow" src="./assets/img/ads/house4.jpg" alt="ad"></a>
+                                        </td>
+                                        <td class="subheading">3 bedrooms house</td>
+                                        <td data-title="price :">$25000</td>
+                                        <td data-title="status :"><a class="btn small-btn f-green">available</a></td>
+                                        <td data-title="operation :"><a href="product.html" class="btn pin-btn blue"><i class="pro-pencil-lite"></i></a><a href="product.html" class="btn pin-btn red"><i class="pro-bin2-lite"></i></a></td>
+                                    </tr>
+                                    <tr class="margin-t-3 white">
+                                        <td data-title="image :">
+                                            <a href="product.html"><img class="ad-img shadow" src="./assets/img/ads/house4.jpg" alt="ad"></a>
+                                        </td>
+                                        <td class="subheading">3 bedrooms house</td>
+                                        <td data-title="price :">$25000</td>
+                                        <td data-title="status :"><a class="btn small-btn f-green">available</a></td>
+                                        <td data-title="operation :"><a href="product.html" class="btn pin-btn blue"><i class="pro-pencil-lite"></i></a><a href="product.html" class="btn pin-btn red"><i class="pro-bin2-lite"></i></a></td>
+                                    </tr>
+                                    <tr class="margin-t-3 white">
+                                        <td data-title="image :">
+                                            <a href="product.html"><img class="ad-img shadow" src="./assets/img/ads/house4.jpg" alt="ad"></a>
+                                        </td>
+                                        <td class="subheading">3 bedrooms house</td>
+                                        <td data-title="price :">$25000</td>
+                                        <td data-title="status :"><a class="btn small-btn f-green">available</a></td>
+                                        <td data-title="operation :"><a href="product.html" class="btn pin-btn blue"><i class="pro-pencil-lite"></i></a><a href="product.html" class="btn pin-btn red"><i class="pro-bin2-lite"></i></a></td>
+                                    </tr>
+                                    <tr class="margin-t-3 white">
+                                        <td data-title="image :">
+                                            <a href="product.html"><img class="ad-img shadow" src="./assets/img/ads/house4.jpg" alt="ad"></a>
+                                        </td>
+                                        <td class="subheading">3 bedrooms house</td>
+                                        <td data-title="price :">$25000</td>
+                                        <td data-title="status :"><a class="btn small-btn f-green">available</a></td>
+                                        <td data-title="operation :"><a href="product.html" class="btn pin-btn blue"><i class="pro-pencil-lite"></i></a><a href="product.html" class="btn pin-btn red"><i class="pro-bin2-lite"></i></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+        </div>
+            </div>
+        </main>
+    <footer class="footer white">
+        <a class="margin-r-4">Property-lite 2019</a>
+    </footer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtdJ2lMzLN7jGl_KHHWv1UvXrhqExiSUM&libraries=places&callback=initAutocomplete" async defer></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>

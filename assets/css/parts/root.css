@@ -1,0 +1,13 @@
+:root {
+    --theme-color: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+    --white: white;
+    --orange: orange;
+    --red: red;
+    --teal: teal;
+    --green: #20bf55;
+    --shadow: 0 .13rem .23rem rgba(145, 145, 145, 0.295);
+    --shadow-top: 0 -.125rem .25rem rgba(145, 145, 145, 0.295);
+    --linear-gradient: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+    --clip-path: polygon(46% 0, 18% 97%, 0 88%, 0 0);
+    --border-radius: .8rem;
+  }

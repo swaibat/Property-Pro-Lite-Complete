@@ -1,0 +1,143 @@
+ 
+  .analytics {
+    padding: 5px 6px;
+    overflow: hidden;
+    min-width: 694px;
+    width: 60%;
+  }
+  
+  .analytics-title {
+    margin: 0 0 5px 3px;
+    line-height: 14px;
+    font-size: 11px;
+    font-weight: normal;
+  }
+  
+  .analytics-chart {
+    float: left;
+    width: 71%;
+  }
+  
+  .analytics-colchart {
+    padding: 2px 4px 0;
+    height: 180px;
+    overflow: hidden;
+    background: #f5f5f56e;
+    border-radius: var(--border-radius);
+    width: 100%;
+  }
+  
+  .analytics-colgroup {
+    float: left;
+    margin: 0 7px;
+    height: 100%;
+  }
+  
+  .analytics-col {
+    position: relative;
+    float: left;
+    margin: 0 5px;
+    width: 7px;
+    height: 100%;
+  }
+  
+  .analytics-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #0be4aa;
+  }
+  
+  .analytics-legend {
+    margin-top: 3px;
+    padding: 0 4px;
+    height: 14px;
+    line-height: 14px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #adb7cf;
+    text-align: center;
+  }
+  
+  .analytics-legend > p {
+    float: left;
+    width: 25%;
+  }
+  
+  .analytics-legend span {
+    line-height: 13px;
+    font-weight: normal;
+    font-size: 9px;
+    color: #a0a9bf;
+  }
+  
+  .analytics-metrics {
+    float: right;
+    width: 195px;
+    text-align: center;
+  }
+  
+  .analytics-count {
+    margin-bottom: 15px;
+    line-height: 60px;
+    font-size: 48px;
+    color: #242831;
+    font-weight: bold;
+    letter-spacing: -1px;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .analytics-metric {
+    float: left;
+    width: 50%;
+    line-height: 15px;
+    font-size: 11px;
+    font-weight: bold;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-weight: normal;
+  }
+  
+  .analytics-metric > span {
+    display: block;
+    margin-top: 6px;
+    line-height: 24px;
+    font-size: 20px;
+    font-weight: normal;
+    color: #cad6eb;
+  }
+  
+  .analytics-metric + .analytics-metric {
+    border-left: 1px solid #5e6876;
+    border-left-color: rgba(40, 44, 52, 0.25);
+  }
+
+  .analytics-holder{
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media (max-width: 992px) {
+    .analytics-holder{
+      flex-direction: column-reverse;
+    }
+    .dash-cards{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    .stat-card {
+      width: calc(50%-.5rem);
+      margin-left: 0;
+      min-width: 120px;
+  }
+  .stat-card:first-child{
+    margin-right: 1rem;
+  }
+  .analytics {
+    display: none;
+  }
+  }

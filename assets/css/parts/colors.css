@@ -1,0 +1,74 @@
+/* ========================[ colors ]=====================*/
+
+.white {
+  background: var(--white);
+}
+
+.white-txt {
+  color: var(--white);
+}
+
+.blue {
+  background: var(--theme-color);
+}
+
+.blue-txt {
+  color: var(--theme-color);
+}
+
+.teal {
+  background: var(--teal);
+}
+
+.teal-txt {
+  color: var(--teal);
+}
+
+.orange {
+  background: var(--orange);
+}
+
+.orange-txt {
+  color: var(--orange);
+}
+
+.red {
+  background: var(--red);
+}
+
+.red-txt {
+  color: var(--red);
+}
+
+.green {
+  background: var(--green);
+}
+
+
+/* faint colors */
+
+.f-red {
+  background: #f8d7da;
+  color: #fc2032;
+}
+
+.f-orange {
+  color: orange;
+  background: #fff3cd;
+}
+
+.f-blue {
+  color: var(--theme-color);
+  background: #cce5ff;
+}
+
+.f-blue {
+  color: var(--theme-color);
+  background: #cce5ff;
+}
+
+.f-green {
+  color: white;
+  background: var(--green);
+  letter-spacing: .5px;
+}
