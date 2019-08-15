@@ -12,7 +12,7 @@ document.onreadystatechange = function getproperty() {
             <div class="card">
                 <div class="card-body">
                     <span class="white shadow price-tag">$${ad.price}</span>
-                    <a class="bg-imgs" href="oneAd.html"><img src="${ad.imageurl[0]}" alt="${ad.type}" style="width:100%"></a>
+                    <a class="bg-imgs" href="oneAd.html?id=${ad.id}"><img src="${ad.imageurl[0]}" alt="${ad.type}" style="width:100%"></a>
                 </div>
                 <div class="card-foot flex-y">
                     <div class="ad-hero">
