@@ -136,8 +136,8 @@
         font-size: 26px;
     }
     .sub-container{
-        margin-left: 0rem;
-        margin-right: 0rem;
+        margin-left: .5rem;
+        margin-right: .5rem;
         background: #ffffff;
         border-radius: var(--border-radius);
         padding:.5rem;

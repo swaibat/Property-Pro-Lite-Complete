@@ -118,7 +118,7 @@ nav {
 }
 
 .page-container {
-  margin-top: 5rem;
+  margin-top: 3.5rem;
   width: 100%;
   border-radius: var(--border-radius);
   margin-bottom: 3rem;
@@ -310,7 +310,7 @@ input:focus {
 .sm-font {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
-  font-size: 13.5px;
+  font-size: 13px;
 }
 
 .icon.shadow.padding-4 {
