@@ -7,6 +7,7 @@
 @import "./parts/fonts.css";
 @import "./parts/utilities.css";
 @import "./parts/spacing.css";
-@import "./parts/media.css";
 @import "./parts/colors.css";
 @import "./parts/analytics.css";
+@import "./parts/carousel.css";
+@import "./parts/media.css";
