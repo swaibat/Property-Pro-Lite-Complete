@@ -16,14 +16,11 @@
   position: relative;
 }
 
-.bg-imgs{
-  position: relative;
-}
-.bg-imgs:before {
+.card-body:after {
   content: '';
 position: absolute;
 right: 0;
-bottom: 1px;
+bottom: 36px;
 left: 0;
 background-image: linear-gradient(to bottom ,rgba(45, 45, 45, 0.3),rgb(4, 4, 4)) !important;
   height: 40px;
@@ -61,16 +58,14 @@ background-image: linear-gradient(to bottom ,rgba(45, 45, 45, 0.3),rgb(4, 4, 4))
 
 .ad-hero{
   position: absolute;
-  margin-top: -1.2rem;
+  margin-top: -1.1rem;
   color: #f4f2f2;
   width: 100%;
   left: 0;
-  float: right;
+  display: flex;
+  justify-content: space-between !important;
 }
-.ad-hero span{
-  float: right;
-  padding-right: 10px;
-}
+
 .card img:hover {
   transform: scale(1.1);
 }
@@ -192,7 +187,6 @@ background-image: linear-gradient(180deg,
 table {
   width: 100%;
   max-width: 1200px;
-  margin: auto;
   font: 16px Arimo, Arial, "Helvetica Neue", Helvetica, sans-serif;
   border-collapse: collapse;
   border-radius: 10px;

@@ -12,12 +12,15 @@ document.onreadystatechange = function getproperty() {
             <div class="card">
                 <div class="card-body">
                     <span class="white shadow price-tag">$${ad.price}</span>
-                    <a class="bg-imgs" href="oneAd.html?id=${ad.id}"><img src="${ad.imageurl[0]}" alt="${ad.type}" style="width:100%"></a>
+                    <a  href="oneAd.html?id=${ad.id}"><img src="${ad.imageurl[0]}" alt="${ad.type}"></a>
                 </div>
                 <div class="card-foot flex-y">
-                    <div class="ad-hero">
-                        <span class="sm-font"><i class="pro-eye-lite margin-l-3 red-txt margin-r-1"></i>${ad.views} views</span>
-                        <span class="sm-font"><i class="pro-location-lite margin-l-3 margin-r-1"></i>${ad.city}</span>
+                    <div class="ad-hero bg-imgs">
+                        <span class ="img-size">
+                            <span class="sm-font">${ad.imageurl.length}<i class="pro-camera-lite margin-l-1"></i></span>
+                        </span>
+                        <span class="sm-font"><i class="pro-eye-lite red-txt margin-r-1"></i>${ad.views} views</span>
+                        <span class="sm-font margin-r-2"><i class="pro-location-lite margin-r-1"></i>${ad.city}</span>
                     </div>
                     <div class="d-flex padding-2">
                         <p>${ad.type}</p>

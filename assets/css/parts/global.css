@@ -52,6 +52,7 @@ img,
 }
 html {
   font-family: 'Barlow', sans-serif;
+  scroll-behavior: smooth;
 }
 
 .bg {
@@ -192,8 +193,7 @@ input:focus {
 }
 .detail-img img {
   width: 100%;
-  border-radius: .8rem;
-  box-shadow: -1px -11px 40px -27px rgba(0,0,0,0.75);
+  border-radius: .5rem;
 }
 .product p{
   margin: .5rem !important ;
@@ -233,7 +233,7 @@ input:focus {
 /* google map style */
 
 #map {
-  height: 250px;
+  height: 200px;
   width: 100%;
   margin-top: 10px;
 }
@@ -322,10 +322,9 @@ input:focus {
 
 .img-holder {
   width: 100%;
-  border-radius: .8rem;
   box-shadow: var(--shadow);
-  overflow: hidden;
   height: 250px;
+  border-radius: var(--border-radius);
 }
 
 .nav-item {
@@ -352,7 +351,7 @@ input:focus {
 
 .sub-container{
   margin-left: 10rem;
-  margin-right: 1rem;
+  margin-right: 0rem;
   background: #ffffff;
   border-radius: var(--border-radius);
   padding:.5rem;
@@ -366,25 +365,56 @@ input:focus {
 .transparent{
   background: transparent !important;
 }
-
-.footer-related::-webkit-scrollbar {
-  height:.3em;
+.d-block{
+ display: block;
 }
-::-webkit-scrollbar {
-  width: 1px !important;
-  background-color: #F5F5F5;
+.img-size {
+  margin-left: .4rem;
+  margin-top: -.4rem;
+}
+.img-size span {
+  padding: 1px 5px;
+  background: gainsboro;
+  bottom: 0;
+  border-radius: 3px;
+  color: black;
+}
+.status{
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  border:solid 2px white;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: #01baef;
+[for="imageUpload"] {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 0;
+  border-radius: 100%;
+  background: #FFFFFF;
+  border: 1px solid transparent;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  font-weight: normal;
+  transition: all 0.2s ease-in-out;
+  margin-left: -1.5rem;
+  position: absolute;
+}
+[for="imageUpload"] i {
+  display: flex;
+  justify-content: center; 
+  line-height: 1.6;
+}
+#avatar:hover {
+  display: inline-block;
+  cursor: pointer;
+}
+#avatar-space .status {
+  margin: 3.5rem 0 0 -1.4rem;
+  background: var(--green);
 }
 
-.corner_top_mask {
-	top:-3px;
-    left:-4px;
-}
-
-.corner_bottom_mask {
-	top:-18px;
-    left:-4px;
+.avatar-holder{
+  width: 85px;
+  height: 85px;
 }

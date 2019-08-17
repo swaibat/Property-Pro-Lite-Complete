@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link href="assets/css/app.css" rel="stylesheet">
     <title>Property-lite</title>
 </head>
+
 <body id="loader" class="loader ">
     <div id="bg" class="bg"></div>
     <!-- start of navigation -->
@@ -17,13 +19,43 @@
             <div class="flex-center">
                 <img class="circle" src="./assets/img/user.svg" height="85" width="85" alt="user">
             </div>
-            <ul class="margin-x-3">
-                <li class="nav-item"><a href="dashboard.html"><i class="pro-home-lite margin-r-2"></i>Dashboard</a></li>
-                <li class="nav-item"><a href="postad.html"><i class="pro-plus-lite margin-r-2 sm-font"></i>Post ad</a></li>
-                <li class="nav-item active"><a href="myads.html"><i class="pro-stack-lite margin-r-2"></i>My ads</a></li>
-                <li class="nav-item"><a href="#"><i class="pro-bubbles3-lite margin-r-2"></i>Messages</a></li>
-                <li class="nav-item"><a href="#"><i class="pro-bell-lite margin-r-2"></i>Notifications</a></li>
-                <li class="nav-item"><a href="index.html"><i class="pro-switch-lite margin-r-2"></i> Logout</a></li>
+            <ul class="margin-x-1 user-nav">
+                <li class="nav-item">
+                    <select class="form-input">
+                        <option value="singlerooms">city</option>
+                        <option value="3bedrooms">3bedrooms</option>
+                        <option value="5bedrooms">5bedrooms</option>
+                        <option value="miniflat">miniFlat</option>
+                        <option value="others">others</option>
+                    </select>
+                </li>
+                <li class="nav-item">
+                    <select class="form-input">
+                        <option value="singlerooms">type</option>
+                        <option value="3bedrooms">3bedrooms</option>
+                        <option value="5bedrooms">5bedrooms</option>
+                        <option value="miniflat">miniFlat</option>
+                        <option value="others">others</option>
+                    </select>
+                </li>
+                <li class="nav-item">
+                    <input class="form-input" type="number" placeholder="min price">
+                </li>
+                <li class="nav-item">
+                    <input class="form-input" type="number" placeholder="max price">
+                </li>
+                <li class="nav-item">
+                    <select class="form-input">
+                        <option value="singlerooms">Agents</option>
+                        <option value="3bedrooms">3bedrooms</option>
+                        <option value="5bedrooms">5bedrooms</option>
+                        <option value="miniflat">miniFlat</option>
+                        <option value="others">others</option>
+                    </select>
+                </li>
+                <li class="nav-item">
+                    <a class="btn blue align-center" href="">Filter </a>
+                </li>
             </ul>
         </ul>
         <div class="margin-l-auto margin-r-3 flex-x">
@@ -39,61 +71,216 @@
             <button type="button" onclick="toggle()" class="btn mobile-view"><span class="humberger">&#8942;</span></button>
         </div>
     </nav>
+    <style>
+        
+    </style>
     <!-- //navigation -->
     <!-- start of main content -->
     <main role="main">
         <div class="padding-1 page-container ">
-            <h3 class="page-title"><i class="pro-earth-lite margin-r-2"></i> View Ad</h3>
-            <div class="sub-container">
-                    <div class="d-flex product">
-                            <div class="detail-img padding-2">
-                                <div class="img-holder">
-                                    <img src="https://res.cloudinary.com/dbe1sfmr4/image/upload/v1562085590/house2_ret4vf.jpg" alt="product">
-                                </div>
-                                <div class="footer-related">
-                                    <img class="footer-img shadow" src="./assets/img/ads/house1/interior1.jpg" alt="product">
-                                    <img class="footer-img shadow" src="./assets/img/ads/house1/interior2.jpg" alt="product">
-                                    <img class="footer-img shadow" src="./assets/img/ads/house1/interior3.jpg" alt="product">
-                                    <img class="footer-img shadow" src="./assets/img/ads/house1/interior4.jpg" alt="product">
-                                    <img class="footer-img shadow" src="./assets/img/ads/house1/interior3.jpg" alt="product">
-                                    <img class="footer-img shadow" src="./assets/img/ads/house1/interior4.jpg" alt="product">
-                                </div>
-                                <div class="d-flex margin-1 padding-2">
-                                    <img class="circle agent-img" src="./assets/img/user.svg" height="70" width="70" alt="user">
-                                    <div class="flex-y padding-x-2">
-                                        <b>Contact agent</b>
-                                        <p class="margin-l-3">Rumbiiha<span class="margin-l-3">swaibu</span></p>
-                                        <p class="margin-l-3"><b><i class="pro-phone-lite"></i></b> 0758307272 <b><i class="pro-envelop-lite margin-l-2 margin-r-1"></i></b> agent@gmail.com </p>
-                                    </div>
-                                </div>
-                            </div>
-                    <!-- left product details -->
-                    <div class="flex-y prdt-dtls padding-x-2">
-                        <h1 class="margin-1">Capital house GH700</h1>
-                        <div class="d-flex">
-                            <p><b>Ad id :</b> 653821871 </p>
-                            <p class="margin-l-3"><b>Location :</b>kigali </p>
-                            <p class="margin-l-3"> <b>Type :</b> 5 Bedrooms</p>
+            <h3 class="page-title"><i class="pro-plus-lite margin-r-2 sm-font"></i> All property</h3>
+            <div class="sub-container transparent">
+                <div class="product-card white border-radius">
+                    <div class="slider-holder">
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 6</div>
+                            <img src="./assets/img/720x480.png">
                         </div>
-                        <h2>$150</h2>
-                        <p class="text-center">Lorem ipsum dolor sit amet, no mea aperiri invenire, nisl dolore mollis ad sed, ei sonet singulis persequeris sea.</p><!--The div element for the map -->
-                            <div id="map" class="shadow border-radius"></div>
-                            <div class="d-flex float-right margin-t-2">
-                                <a href="editad.html" class="btn btn-gradient "><i class="pro-pencil-lite margin-r-1"></i>Edit</a>
-                                <a onclick="flashMe()" class="btn orange margin-l-3 "><i class="pro-checkmark-lite margin-r-1"></i>sold</a>
-                                <a onclick="flashMe()" class="btn red margin-l-auto"><i class="pro-bin2-lite margin-r-1"></i>Delete</a>
-                            </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 6</div>
+                            <img src="./assets/img/720x480.png">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 6</div>
+                            <img src="./assets/img/720x480.png">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">4 / 6</div>
+                            <img src="./assets/img/720x480.png">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">5 / 6</div>
+                            <img src="./assets/img/720x480.png">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">6 / 6</div>
+                            <img src="./assets/img/720x480.png">
+                        </div>
+
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        <div class="row">
+                            <img class="demo cursor" src="./assets/img/720x480.png" onclick="currentSlide(1)" alt="The Woods">
+                            <img class="demo cursor" src="./assets/img/720x480.png" onclick="currentSlide(2)" alt="Cinque Terre">
+                            <img class="demo cursor" src="./assets/img/720x480.png" onclick="currentSlide(3)" alt="Mountains and fjords">
+                            <img class="demo cursor" src="./assets/img/720x480.png" onclick="currentSlide(4)" alt="Northern Lights">
+                            <img class="demo cursor" src="./assets/img/720x480.png" onclick="currentSlide(5)" alt="Nature and sunrise">
+                            <img class="demo cursor" src="./assets/img/720x480.png" onclick="currentSlide(6)" alt="Snowy Mountains">
                         </div>
                     </div>
-        </div>
+                    <div class="flex-y prdt-dtls padding-x-2">
+                        <h1 class="margin-1">5Bedrooms </h1>
+                        <div class="d-flex">
+                            <p><b>Ad id :</b> 653821871 </p>
+                            <p class="margin-l-3"><b><i class="pro-location-lite margin-l-3 margin-r-1"></i></b>kigali </p>
+                            <p class="margin-l-3"> <b>Type :</b> 5 Bedrooms</p>
+                        </div>
+                        <h2 class="float-right">$150</h2>
+                        <div id="map" class="shadow border-radius"></div>
+                        <div class="d-flex float-right margin-t-2">
+                            <a onclick="report()" class="btn red margin-l-auto margin-r-2"><span>&#9872;</span> Report Ad</a>
+                        </div>
+                    </div>
+
+                    <div class="white border-radius  padding-2 margin-l-2" style="width: 40%">
+                        <div class="flex-center">
+                            <img class="circle" src="./assets/img/user.svg" height="85" width="85" alt="user">
+                        </div>
+                        <h3 class="align-center teal-txt margin-b-2">swaibu</h3>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="left">Followers</td>
+                                    <td class="right">150k</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">Following</td>
+                                    <td class="right">1820</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">Reputation</td>
+                                    <td class="right">98%</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">Rank</td>
+                                    <td class="right">Expert</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">Reputation</td>
+                                    <td class="right">98%</td>
+                                </tr>
+                                <tr>
+                                    <span class="btn blue align-center margin-2">start chat</span>
+                                    <span class="btn red align-center margin-2 ">call agent</span>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>    
+            <h3>More ads by from  swaibu</h3>
+            <div class="agent-card">
+                    <article class="d-flex white">
+                      <div class="img-box"><img src="./assets/img/720x480.png" /></div>
+                      <div class="content margin-t-2">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td class="left">5 bedroom house</td>
+                                        <td class="right">$50000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left">kamokay,kampala, Uganda</td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td class="left">Reputation</td>
+                                        <td class="right">20 views</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                      </div>
+                    </article>
+                    <article class="d-flex white">
+                            <div class="img-box"><img src="./assets/img/720x480.png" /></div>
+                            <div class="content margin-t-2">
+                                  <table>
+                                      <tbody>
+                                          <tr>
+                                              <td class="left">5 bedroom house</td>
+                                              <td class="right">$50000</td>
+                                          </tr>
+                                          <tr>
+                                              <td class="left">kamokay,kampala, Uganda</td>
+                                              
+                                          </tr>
+                                          <tr>
+                                              <td class="left">Reputation</td>
+                                              <td class="right">20 views</td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                            </div>
+                          </article>
+
             </div>
-        </main>
+            </div>
+        </div>
+    </main>
+    <div id="delete" class="modal-container">
+        <div class="modal">
+            <form id="user" class="flex-y" action="adsList.html">
+                <h2 class="align-center margin-t-2">Report ad</h2>
+                <select class="form-input margin-t-1 margin-b-3">
+                    <option selected>Reason</option>
+                    <option value="3 bedrooms"><span>pricing</span></option>
+                    <option value="3 bedrooms">weird demand</option>
+                    <option value="3 bedrooms">Already sold</option>
+                    <option value="3 bedrooms">others</option>
+                </select>
+                <textarea class="margin-b-3 padding-2" rows="4" placeholder="your description here..."></textarea>
+                <div class="d-flex footer-btn">
+                    <a href="adsList.html" class="btn modal-btn red-txt">REPORT</a>
+                    <a onclick="closeDelete()" class="btn modal-btn blue-txt">CANCEL</a>
+                </div>
+            </form>
+        </div>
+    </div>
     <footer class="footer white">
         <a class="margin-r-4">Property-lite 2019</a>
     </footer>
-    <script src="assets/js/app.js"></script>
-    <script src="./assets/js/fetch/get-one.js"></script>
-    <script src="assets/js/fetch/del-ad.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtdJ2lMzLN7jGl_KHHWv1UvXrhqExiSUM&callback=initMap"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtdJ2lMzLN7jGl_KHHWv1UvXrhqExiSUM&libraries=places&callback=initAutocomplete" async defer></script>
+    <script src="./assets/js/app.js"></script>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active1", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active1";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
 </body>
+
 </html>
