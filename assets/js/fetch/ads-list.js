@@ -1,12 +1,10 @@
-document.onreadystatechange = function getproperty() {
     fetch('http://localhost:3000/api/v2/property')
         .then((response) => response.json())
         .then((e) => {
             if (e.status === 403) location.replace("index.html")
             if (e.status === 404) document.getElementById('holder').innerHTML = data.error;
-
+            const agents = e.data.filter(ad => ad.owner.id === agent)
             let ads = '';
-
             e.data.forEach((ad) => {  
             ads += `
             <div class="card">
@@ -32,4 +30,3 @@ document.onreadystatechange = function getproperty() {
             });
             document.getElementById('ads').innerHTML = ads;
         });
-    }   

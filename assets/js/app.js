@@ -9,25 +9,38 @@ window.addEventListener('load', function () {
         var e = this.nextElementSibling;
         "block" === e.style.display ? e.style.display = "none" : e.style.display = "block"
     });
-    
-function initMap() {
-  // The location of 
-  var kampala = {
-      lat: 0.347596,
-      lng: 32.582520
-  };
-  // The map, centered at 
-  var map = new google.maps.Map(
-      document.getElementById('map'), {
-          zoom: 9,
-          center: kampala
-      });
-  // The marker, positioned at 
-  var marker = new google.maps.Marker({
-      position: kampala,
-      map: map
-  });
-}
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" current", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " current";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
+    }   
 
 // delete confirm
 function closeDelete(){
@@ -152,7 +165,7 @@ photoUpload.onchange = function () {
         	previewImageBox = document.createElement('div'),
           removeImage = document.createElement('i');
           let att = document.createAttribute("class");
-          att.value = "pro-bin2-lite";
+          att.value = "icon-bin2-pro-lite";
           removeImage.setAttributeNode(att);
         	let removeIcon = document.createTextNode(' ');
         	removeImage.appendChild(removeIcon);
