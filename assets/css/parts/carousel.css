@@ -82,7 +82,7 @@ img {
 }
 .slider-holder .mySlides img{
     width: 100%;
-    max-height: 330px;
+    height: 268px;
     border-radius: var(--border-radius);
 }
 .slider-holder .row img{
@@ -98,6 +98,8 @@ img {
     border-radius: .5rem;
     display: flex;
     overflow-x:auto;
+    border: dashed 1px;
+    padding: 4px;
 }
 .agent-card{
   display: flex;  
@@ -156,4 +158,8 @@ article{
 .agent-table tr {
     width: 46.66%;
     border-radius: 10px;
+} 
+
+.product{
+    flex: 1 1 auto !important;
 }

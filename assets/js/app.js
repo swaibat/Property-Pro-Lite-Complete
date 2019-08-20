@@ -1,14 +1,25 @@
-window.addEventListener('load', function () {
-  document.getElementById("loader").classList.remove("loader");
-  });
-  function toggle() {
-    document.getElementById("collapse-menu").classList.toggle("toggle-class")
-    }
-    var i, acc = document.getElementsByClassName("collapsible");
+var i, acc = document.getElementsByClassName("collapsible");
     for (i = 0; i < acc.length; i++) acc[i].addEventListener("click", function() {
         var e = this.nextElementSibling;
         "block" === e.style.display ? e.style.display = "none" : e.style.display = "block"
     });
+
+var para = document.createElement("div");
+var atto = document.createAttribute("id");
+  atto.value = "flash";
+var element = document.querySelector('footer');
+element.appendChild(para).setAttributeNode(atto)
+document.querySelector('#flash').classList.add('flash')
+document.querySelector('#flash').classList.add('d-none')
+document.querySelector('#flash').innerHTML=`
+<div  class="color"></div>
+<span id="flash-txt" class="text"></span>`
+window.addEventListener('load', function () {
+  });
+  document.getElementById("loader").classList.remove("loader");
+  function toggle() {
+    document.getElementById("collapse-menu").classList.toggle("toggle-class")
+    }
     var slideIndex = 1;
     showSlides(slideIndex);
 
@@ -68,12 +79,12 @@ function agentAccess(){
 
  function agentRoutes() {
   document.querySelector('#flash').classList.add('d-none');
-  location.replace("dashboard.html")
+  // location.replace("dashboard.html")
 }
 
 function userRoutes() {
   document.querySelector('#flash').classList.add('d-none');
-  location.replace("adsList.html")
+  // location.replace("adsList.html")
 } 
 
 function report(){

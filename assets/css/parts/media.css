@@ -55,9 +55,6 @@
         margin-top: 3rem;
         width: 100%;
     }
-    .page-container {
-        margin: 4rem 0rem;
-    }
     .navbar.toggle-class {
     width: 10.5rem;
     z-index: 1030;
@@ -177,5 +174,9 @@
     .prdt-dtls {
         width: 60%;
         margin: 10px;
+    }
+    .mySlides img {
+        width: 100%;
+        min-height: 268px;
     }
 }

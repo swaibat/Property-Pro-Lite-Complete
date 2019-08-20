@@ -13,11 +13,23 @@
     <nav class="flex-x shadow padding-y-1 full-width">
         <div class="logo margin-l-3"><a href="index.html">P<span class="tracking-in-contract">roperty Pro</span></a></div>
         <!-- navigation -->
-        <div class="margin-l-auto margin-r-3 d-flex">
+        <div id="logged-out" class="margin-l-auto margin-r-3 d-flex">
             <div class="d-flex">
                 <button onclick="signin()" class="btn teal white-txt btn-lg margin-l-4">signin</button>
                 <button onclick="signup()" class="btn white blue-txt btn-lg margin-l-4">signup</button>
             </div>
+        </div>
+        <div id="logged-in" class="d-none margin-l-auto margin-r-3 flex-x">
+                <button id="avatar" class="collapsible padding-t-1 d-flex btn">
+                    <span class="padding-r-2 margin-t-1">My account</span>
+                    <img id="nav-avatar" class="circle" src="./assets/img/user.svg" height="35" width="35" alt="user">
+                </button>
+                <ul class="drop-content swing-in-top-fwd white d-none padding-2 shadow">
+                    <li class="padding-y-2"><i class="pro-enter-lite margin-x-2"></i>my account</li>
+                    <li class="padding-y-2"><a><i class="pro-info-lite margin-x-2"></i>profile</a></li>
+                    <li class="padding-y-2"><a><i class="pro-cog-lite margin-x-2"></i>Setting</a></li>
+                </ul>
+                <button type="button" onclick="toggle()" class="btn mobile-view"><span class="humberger">&#8942;</span></button>
         </div>
     </nav>
     <!-- //navigation -->
@@ -165,16 +177,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-body">
-                            <span class="white shadow price-tag">$105000</span>
-                            <a href="oneAd.html"><img src="https://res.cloudinary.com/dbe1sfmr4/image/upload/v1562085549/house4_dzlwlf.jpg" alt="Avatar" style="width:100%"></a>
-                        </div>
-                        <div class="card-foot">
-                            <div class="d-flex padding-2">
-                                <p>5-bedroom</p>
-                                <a class="margin-l-auto orange-txt" onclick="signin()">Details</a>
-                            </div>
-                        </div>
+                            <!-- <span class="timeago" datetime="2019-08-19T08:22:22.098Z">about 20 hours ago</span> -->
                     </div>
                     <div class="card">
                         <div class="card-body">
@@ -241,16 +244,9 @@
             </form>
         </div>
     </div>
-    
-    <div id="flash" class="flash d-none">
-        <div  class="color"></div>
-        <span id="flash-txt" class="text"></span>
-        <div class="close">
-            <span></span>
-        </div>
-    </div>
+    <script src="./assets/js/app.js"></script>
     <script src="assets/js/fetch/auth.js"></script>
-    <script src="assets/js/app.js"></script>
+    <script src="./assets/js/fetch/my-account.js"></script>
 </body>
 
 </html>
