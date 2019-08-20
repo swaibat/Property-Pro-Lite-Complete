@@ -1,16 +1,17 @@
 fetch(`http://localhost:3000/api/v2/property/${JSON.parse(location.href.split('=')[1])}`)
         .then((response) => response.json())
         .then((e) => {
-            if (e.status === 403) location.replace("index.html")
+            // if (e.status === 403) location.replace("index.html")
             if (e.status === 404) document.getElementById('holder').innerHTML = data.error;
             const ad = e.data[0];
             document.querySelector('#details').innerHTML =`
-                    <h1 class="margin-1">${e.data[0].type} in ${e.data[0].city}</h1>
+                    <h1 class="margin-1 margin-t-n1">${e.data[0].type} in ${e.data[0].city}</h1>
                         <div class="justify-btn">
                             <p><b>Ad id :</b> ${e.data[0].id} </p>
                             <p class="margin-l-3"><i class="pro-alarm-lite margin-r-2"></i>${e.data[0].owner.createdon.split('T')[0]}</p>
-                            <p class="margin-l-3"><i class="pro-location-lite margin-r-2"></i>${e.data[0].address}</p>
+                            <p class="margin-l-3"><i class="pro-eye-lite margin-r-2"></i>${e.data[0].views} views</p>
                         </div>
+                        <p class="margin-l-3"><i class="pro-map-placeholder-dark-symbol-lite margin-r-2"></i>${e.data[0].address}</p>
                     <h2>$150</h2>
                 `
             document.querySelector('#agent').innerHTML =`
@@ -28,7 +29,7 @@ fetch(`http://localhost:3000/api/v2/property/${JSON.parse(location.href.split('=
                         <td  class="left"><i class="pro-envelop-lite margin-r-2"></i><span id="ownerEmail">${e.data[0].owner.email}</span></td>
                     </tr>
                     <tr>
-                        <td class="left"><i class="pro-location-lite margin-r-2"></i>${e.data[0].owner.address}</td>
+                        <td class="left"><i class="pro-map-placeholder-dark-symbol-lite margin-r-2"></i>${e.data[0].owner.address}</td>
                     </tr>
                     <tr>
                         <td class="left">Reg Date: ${e.data[0].owner.createdon.split('T')[0]}</td>
@@ -94,7 +95,7 @@ fetch(`http://localhost:3000/api/v2/property/${JSON.parse(location.href.split('=
         fetch('http://localhost:3000/api/v2/property')
         .then((response) => response.json())
         .then((e) => {
-            if (e.status === 403) location.replace("index.html")
+            // if (e.status === 403) location.replace("index.html")
             if (e.status === 404) document.getElementById('holder').innerHTML = data.error;
             
             const agentAds = e.data.filter(ad => ad.owner.email === document.querySelector('#ownerEmail').innerHTML)
@@ -112,7 +113,7 @@ fetch(`http://localhost:3000/api/v2/property/${JSON.parse(location.href.split('=
                             <span class="sm-font">${ad.imageurl.length}<i class="pro-camera-lite margin-l-1"></i></span>
                         </span>
                         <span class="sm-font"><i class="pro-eye-lite red-txt margin-r-1"></i>${ad.views} views</span>
-                        <span class="sm-font margin-r-2"><i class="pro-location-lite margin-r-1"></i>${ad.city}</span>
+                        <span class="sm-font margin-r-2"><i class="pro-map-placeholder-dark-symbol-lite margin-r-1"></i>${ad.city}</span>
                     </div>
                     <div class="d-flex padding-2">
                         <p>${ad.type}</p>
@@ -125,5 +126,49 @@ fetch(`http://localhost:3000/api/v2/property/${JSON.parse(location.href.split('=
             document.getElementById('agentAds').innerHTML = adsByAgent;
         });
 
+          function delProperty() {
+          fetch(`http://localhost:3000/api/v2/property/${JSON.parse(location.href.split('=')[1])}`, {
+            method: 'DELETE',
+                  headers: {
+                    Accept: 'application/json, text/plain , */*',
+                    'content-type': 'application/json',
+                  },
+                })
+                  .then(response => response.json())
+                  .then((data) => {
+                    if (data.status === 200) {
+                    agentAccess();
+                      document.querySelector('.color').classList.add('green');
+                      document.querySelector('#signup').classList.remove('visible');
+                      document.getElementById('flash-txt').innerHTML = data.message;
+                    } else {
+                      errorMe();
+                      document.querySelector('.color').classList.add('red');
+                      document.getElementById('flash-txt').innerHTML = data.error || data.message;
+                    }
+                  });
+        }
+        function patchProperty() {
+          fetch(`http://localhost:3000/api/v2/property/${JSON.parse(location.href.split('=')[1])}/sold`, {
+            method: 'PATCH',
+                  headers: {
+                    Accept: 'application/json, text/plain , */*',
+                    'content-type': 'application/json',
+                  },
+                })
+                  .then(response => response.json())
+                  .then((data) => {
+                    if (data.status === 200) {
+                    agentAccess();
+                      document.querySelector('.color').classList.add('green');
+                      document.querySelector('#signup').classList.remove('visible');
+                      document.getElementById('flash-txt').innerHTML = data.error || data.message;
+                    } else {
+                      errorMe();
+                      document.querySelector('.color').classList.add('red');
+                      document.getElementById('flash-txt').innerHTML = data.error || data.message;
+                    }
+                  });
+        }
 
 

@@ -10,13 +10,19 @@
 <body id="loader" class="loader ">
     <div id="bg" class="bg"></div>
     <!-- start of navigation -->
-    <nav class="flex-x shadow padding-y-1 fixed-top full-width">
-        <div class="logo margin-l-3 margin-t-2"><a href="index.html">P<span class="tracking-in-contract">roperty Pro</span></a></div>
-        <!-- start of sidenav -->
-        <div class="margin-l-auto margin-r-3 flex-x">
+    <nav class="flex-x shadow padding-y-1 full-width">
+        <div class="logo margin-l-3"><a href="index.html">P<span class="tracking-in-contract">roperty Pro</span></a></div>
+        <!-- navigation -->
+        <div id="logged-out" class="margin-l-auto margin-r-3 d-flex">
+            <div class="d-flex">
+                <button onclick="signin()" class="btn teal white-txt btn-lg margin-l-4">signin</button>
+                <button onclick="signup()" class="btn white blue-txt btn-lg margin-l-4">signup</button>
+            </div>
+        </div>
+        <div id="logged-in" class="d-none margin-l-auto margin-r-3 flex-x">
             <button id="avatar" class="collapsible padding-t-1 d-flex btn">
                 <span class="padding-r-2 margin-t-1">My account</span>
-                <img class="circle" src="./assets/img/user.svg" height="35" width="35" alt="user">
+                <img id="nav-avatar" class="circle" src="./assets/img/user.svg" height="35" width="35" alt="user">
             </button>
             <ul class="drop-content swing-in-top-fwd white d-none padding-2 shadow">
                 <li class="padding-y-2"><i class="pro-enter-lite margin-x-2"></i>my account</li>
@@ -32,12 +38,12 @@
         <div class="padding-1 page-container">
             <h3 class="page-title margin-3"><i class="pro-plus-lite margin-r-2 sm-font"></i> All property</h3>
             <div class="sub-container transparent margin-l-1">
-                    <div class="d-flex product">
-                            <div class="white d-flex product padding-2 border-radius margin-r-2">
+                <div class="d-flex product">
+                    <div class="white d-flex product padding-2 border-radius margin-r-2">
 
                         <div id="slider-holder" class="slider-holder">
                             <div id="slider">
-                            
+
                             </div>
                             <!-- Next and previous buttons -->
                             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -45,63 +51,54 @@
                             <div id="related" class="row"></div>
                         </div>
 
-                    <!-- left product details -->
-                    <div class="flex-y prdt-dtls">
-                        <div id="details"></div>  
-                        <div id="map" class="shadow border-radius"></div>
+                        <!-- left product details -->
+                        <div class="flex-y prdt-dtls">
+                            <div id="details"></div>
+                            <div id="map" class="shadow border-radius"></div>
                             <div class="d-flex float-right margin-t-2">
-                                    <a onclick="report()" class="btn red margin-l-auto"><span>&#9872;</span> Report Ad</a>
-                                </div>
+                                <a onclick="report()" class="btn orange "><i class="pro-like-lite margin-r-1"></i>Favaourite</a>
+                                <a onclick="report()" class="btn red margin-l-auto"><i class="pro-flag-lite margin-r-1"></i>Report Ad</a>
                             </div>
                         </div>
-                            <div id="agent" class="user-card flex-center shadow">
-                                <!-- agent area -->
-                            </div>
-                        </div>
-                        <h3 class="align-center">More ads by from  swaibu</h3>
-                        <div id="agentAds" class="card-wrapper flex-center">
-                                
-                        </div>
                     </div>
-                    
+                    <div id="agent" class="user-card flex-center shadow">
+                        <!-- agent area -->
                     </div>
-                </main>
-                <div id="delete" class="modal-container">
-                    <div class="modal">
-                        <form id="user" class="flex-y" action="adsList.html">
-                            <h2 class="align-center margin-t-2">Report ad</h2>
-                            <select class="form-input margin-t-1 margin-b-3">
-                                <option selected>Reason</option>
-                                <option value="3 bedrooms"><span>pricing</span></option>
-                                <option value="3 bedrooms">weird demand</option>
-                                <option value="3 bedrooms">Already sold</option>
-                                <option value="3 bedrooms">others</option>
-                            </select>
-                            <textarea class="margin-b-3 padding-2" rows="4" placeholder="your description here..."></textarea>
-                            <div class="d-flex footer-btn">
-                                <a href="adsList.html" class="btn modal-btn red-txt">REPORT</a>
-                                <a onclick="closeDelete()" class="btn modal-btn blue-txt">CANCEL</a>
-                            </div>
-                        </form>
-                    </div>
-                    </div>
-                    
-                    
+                </div>
+                <h3 class="align-center">More ads by from  swaibu</h3>
+                <div id="agentAds" class="card-wrapper flex-center">
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <div id="delete" class="modal-container">
+        <div class="modal">
+            <form id="user" class="flex-y" action="adsList.html">
+                <h2 class="align-center margin-t-2">Report ad</h2>
+                <select class="form-input margin-t-1 margin-b-3">
+                    <option selected>Reason</option>
+                    <option value="3 bedrooms"><span>pricing</span></option>
+                    <option value="3 bedrooms">weird demand</option>
+                    <option value="3 bedrooms">Already sold</option>
+                    <option value="3 bedrooms">others</option>
+                </select>
+                <textarea class="margin-b-3 padding-2" rows="4" placeholder="your description here..."></textarea>
+                <div class="d-flex footer-btn">
+                    <a href="adsList.html" class="btn modal-btn red-txt">REPORT</a>
+                    <a onclick="closeDelete()" class="btn modal-btn blue-txt">CANCEL</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <footer class="footer white">
         <a class="margin-r-4">Property-lite 2019</a>
     </footer>
-    <!-- <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcAP0GrIyhCe_kJfKY1Cb4OYOeP5vmhsQ&callback=initMap"></script>
-    <script type="text/javascript">
-
-    
-    </script>
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcAP0GrIyhCe_kJfKY1Cb4OYOeP5vmhsQ&callback=initMap"></script> -->
-    <script>
-        
-    </script>
     <script src="./assets/js/fetch/get-one.js"></script>
     <script src="./assets/js/app.js"></script>
-    
+    <script src="./assets/js/fetch/my-account.js"></script>
 </body>
 </html>

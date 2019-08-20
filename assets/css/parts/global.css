@@ -119,7 +119,6 @@ nav {
 }
 
 .page-container {
-  margin-top: 3.5rem;
   width: 100%;
   border-radius: var(--border-radius);
   margin-bottom: 3rem;
@@ -408,7 +407,6 @@ input:focus {
   line-height: 1.6;
 }
 #avatar:hover {
-  display: inline-block;
   cursor: pointer;
 }
 #avatar-space .status {
@@ -419,4 +417,15 @@ input:focus {
 .avatar-holder{
   width: 85px;
   height: 85px;
+}
+#agent .status{
+  margin-left: -1.5rem;
+}
+
+.available{
+  background: var(--green) !important;
+}
+
+.sold{
+  background: var(--orange) !important;
 }

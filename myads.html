@@ -7,15 +7,20 @@
     <link href="assets/css/app.css" rel="stylesheet">
     <title>Property-lite</title>
 </head>
-<body id="loader" class="loader ">
+<body id="loader" class="loader">
     <div id="bg" class="bg"></div>
     <!-- start of navigation -->
-    <nav class="flex-x shadow padding-y-1 fixed-top full-width">
+    <nav class="flex-x shadow padding-y-1 full-width">
         <div class="logo margin-l-3 margin-t-2"><a href="index.html">P<span class="tracking-in-contract">roperty Pro</span></a></div>
         <!-- start of sidenav -->
         <ul class="navbar fixed-left" id="collapse-menu">
-            <div class="flex-center">
-                <img class="circle" src="./assets/img/user.svg" height="85" width="85" alt="user">
+            <div id="avatar-space" class="flex-center">
+                <img id="avatar" class="circle avatar-holder" src="./assets/img/user.svg" alt="user">
+                <input class="d-none" type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                <label class="d-none" for="imageUpload">
+                    <i class="pro-camera-lite"></i>
+                </label>
+                <span class="status"></span>
             </div>
             <ul class="margin-x-3">
                 <li class="nav-item"><a href="dashboard.html"><i class="pro-home-lite margin-r-2"></i>Dashboard</a></li>
@@ -29,7 +34,7 @@
         <div class="margin-l-auto margin-r-3 flex-x">
             <button id="avatar" class="collapsible padding-t-1 d-flex btn">
                 <span class="padding-r-2 margin-t-1">My account</span>
-                <img class="circle" src="./assets/img/user.svg" height="35" width="35" alt="user">
+                <img id="nav-avatar" class="circle" src="./assets/img/user.svg" height="35" width="35" alt="user">
             </button>
             <ul class="drop-content swing-in-top-fwd white d-none padding-2 shadow">
                 <li class="padding-y-2"><i class="pro-enter-lite margin-x-2"></i>my account</li>
@@ -45,56 +50,28 @@
         <div class="padding-1 page-container ">
             <h3 class="page-title"><i class="pro-stack-lite margin-r-2 "></i> My Ads</h3>
             <div class="sub-container transparent">
-                    <div class="responsive-tables">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Type</th>
-                                        <th>image</th>
-                                        <th>price</th>
-                                        <th>status</th>
-                                        <th>operation</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class=" white">
-                                        <td class="subheading">3 bedrooms house</td>
-                                        <td data-title="image :"><a href="index.html"><img class="ad-img  shadow" src="./assets/img/ads/house.jpg" alt="ad"></a></td>
-                                        <td data-title="price :">$25000</td>
-                                        <td data-title="status :"><a class="btn small-btn f-green">available</a></td>
-                                        <td class="align-center" data-title="operation :"><a href="product.html" class="btn pin-btn blue"><i class="pro-pencil-lite margin-r-1"></i></a><a href="product.html" class="btn pin-btn red"><i class="pro-bin2-lite"></i></td>
-                                    </tr>
-                                    <tr class="margin-t-3 white">
-                                        <td class="subheading">3 bedrooms house</td>
-                                        <td data-title="image :"><a href="product.html"><img class="ad-img shadow" src="./assets/img/ads/house1.jpg" alt="ad"></a></td>
-                                        <td data-title="price :">$25000</td>
-                                        <td data-title="status :"><a class="btn small-btn f-green">available</a></td>
-                                        <td data-title="operation :"><a href="product.html" class="btn pin-btn blue"><i class="pro-pencil-lite"></i></a><a href="product.html" class="btn pin-btn red"><i class="pro-bin2-lite"></i></a></td>
-                                    </tr>
-                                    <tr class="margin-t-3 white">
-                                        <td class="subheading">3 bedrooms house</td>
-                                        <td data-title="image :"><a href="product.html"><img class="ad-img shadow" src="./assets/img/ads/house2.jpg" alt="ad"></a></td>
-                                        <td data-title="price :">$25000</td>
-                                        <td data-title="status :"><a class="btn small-btn f-green">available</a></td>
-                                        <td data-title="operation :"><a href="product.html" class="btn pin-btn blue"><i class="pro-pencil-lite"></i></a><a href="product.html" class="btn pin-btn red"><i class="pro-bin2-lite"></i></a></td>
-                                    </tr>
-                                    <tr class="margin-t-3 white">
-                                        <td class="subheading">3 bedrooms house</td>
-                                        <td data-title="image :"><a href="product.html"><img class="ad-img shadow" src="./assets/img/ads/house4.jpg" alt="ad"></a></td>
-                                        <td data-title="price :">$25000</td>
-                                        <td data-title="status :"><a class="btn small-btn f-green">available</a></td>
-                                        <td data-title="operation :"><a href="product.html" class="btn pin-btn blue"><i class="pro-pencil-lite"></i></a><a href="product.html" class="btn pin-btn red"><i class="pro-bin2-lite"></i></a></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-        </div>
+                <div class="responsive-tables shadow ">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>image</th>
+                                <th>Type</th>
+                                <th>price</th>
+                                <th>status</th>
+                                <th>operation</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ads"></tbody>
+                    </table>
+                </div>
             </div>
-        </main>
+        </div>
+    </main>
     <footer class="footer white">
         <a class="margin-r-4">Property-lite 2019</a>
     </footer>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtdJ2lMzLN7jGl_KHHWv1UvXrhqExiSUM&libraries=places&callback=initAutocomplete" async defer></script>
     <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/fetch/my-account.js"></script>
 </body>
 </html>

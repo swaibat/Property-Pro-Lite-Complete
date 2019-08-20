@@ -10,57 +10,19 @@
 <body id="loader" class="loader ">
     <div id="bg" class="bg"></div>
     <!-- start of navigation -->
-    <nav class="flex-x shadow padding-y-1 fixed-top full-width">
-        <div class="logo margin-l-3 margin-t-2"><a href="index.html">P<span class="tracking-in-contract">roperty Pro</span></a></div>
-        <!-- start of sidenav -->
-        <ul class="navbar fixed-left" id="collapse-menu">
-            <div class="flex-center">
-                <img class="circle" src="./assets/img/user.svg" height="85" width="85" alt="user">
+    <nav class="flex-x shadow padding-y-1 full-width">
+        <div class="logo margin-l-3"><a href="index.html">P<span class="tracking-in-contract">roperty Pro</span></a></div>
+        <!-- navigation -->
+        <div id="logged-out" class="margin-l-auto margin-r-3 d-flex">
+            <div class="d-flex">
+                <button onclick="signin()" class="btn teal white-txt btn-lg margin-l-4">signin</button>
+                <button onclick="signup()" class="btn white blue-txt btn-lg margin-l-4">signup</button>
             </div>
-            <ul class="margin-x-1 user-nav">
-                    <li class="nav-item">
-                            <select class="form-input">
-                                <option value="singlerooms.html">city</option>
-                                <option value="3bedrooms">3bedrooms</option>
-                                <option value="5bedrooms">5bedrooms</option>
-                                <option value="miniflat">miniFlat</option>
-                                <option value="others">others</option>
-                            </select>
-                        </li>
-                        <li class="nav-item">
-                            <select class="form-input" onchange="location = this.value;">
-                                <option>select type</option>
-                                <option value="specific.html?type=singlerooms">singlerooms</option>
-                                <option value="specific.html?type=3bedrooms">3bedrooms</option>
-                                <option value="specific.html?type=5bedrooms">5bedrooms</option>
-                                <option value="specific.html?type=miniFlat">miniFlat</option>
-                                <option value="specific.html?type=others">others</option>
-                            </select>
-                        </li>
-                        <li class="nav-item">
-                            <input class="form-input" min="1" type="number" placeholder="min price">
-                        </li>
-                        <li class="nav-item">
-                            <input class="form-input" min="1" type="number" placeholder="max price">
-                        </li>
-                        <li class="nav-item">
-                            <select class="form-input">
-                                <option value="singlerooms">Agents</option>
-                                <option value="3bedrooms">3bedrooms</option>
-                                <option value="5bedrooms">5bedrooms</option>
-                                <option value="miniflat">miniFlat</option>
-                                <option value="others">others</option>
-                            </select>
-                        </li>
-                        <li class="nav-item">
-                            <a class="btn blue align-center" href="">Filter </a>
-                        </li>
-            </ul>
-        </ul>
-        <div class="margin-l-auto margin-r-3 flex-x">
+        </div>
+        <div id="logged-in" class="d-none margin-l-auto margin-r-3 flex-x">
             <button id="avatar" class="collapsible padding-t-1 d-flex btn">
                 <span class="padding-r-2 margin-t-1">My account</span>
-                <img class="circle" src="./assets/img/user.svg" height="35" width="35" alt="user">
+                <img id="nav-avatar" class="circle" src="./assets/img/user.svg" height="35" width="35" alt="user">
             </button>
             <ul class="drop-content swing-in-top-fwd white d-none padding-2 shadow">
                 <li class="padding-y-2"><i class="pro-enter-lite margin-x-2"></i>my account</li>
@@ -74,11 +36,9 @@
     <!-- start of main content -->
     <main role="main">
         <div class="padding-1 page-container ">
-            <h3 class="page-title"><i class="pro-stack-lite margin-r-2"></i> All property</h3>
-            <div class="sub-container">
-                    <div id="ads" class="card-wrapper flex-center">
-
-                    </div>
+            <h3 class="page-title margin-l-2"><i class="pro-stack-lite margin-r-2"></i> All property</h3>
+            <div class="sub-container margin-2">
+                <div id="ads" class="card-wrapper flex-center"></div>
             </div>
         </div>
     </main>
@@ -88,5 +48,6 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtdJ2lMzLN7jGl_KHHWv1UvXrhqExiSUM&libraries=places&callback=initAutocomplete" async defer></script>
     <script src="./assets/js/fetch/ads-list.js"></script>
     <script src="./assets/js/app.js"></script>
+    <!-- <script src="./assets/js/fetch/my-account.js"></script> -->
 </body>
 </html>
