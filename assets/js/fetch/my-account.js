@@ -1,9 +1,8 @@
 
 
-const url = 'http://localhost:3000/api/v2/users';
 
 // get account information
-fetch(`${url}/myAccount`, {
+fetch(`${document.api.users_url}/myAccount`, {
   method: 'GET',
   headers: {
     authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -80,7 +79,7 @@ function patchProperty() {
   const formData = new FormData();
   const photo = document.getElementById('imageUpload').files[0];
   formData.append('avatar', photo);
-  fetch(`${url}/profile/upload`, {
+  fetch(`${document.api.users_url}/profile/upload`, {
     method: 'PATCH',
     headers: {
       authorization: `Bearer ${localStorage.getItem('token')}`,

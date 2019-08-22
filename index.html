@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="./assets/css/app.css">
     <title>Property-lite</title>
 </head>
-<body class=" white">
+<body id="loader" class="loader white ">
     <div id="bg"></div>
     <!-- start of navigation -->
-    <nav class="flex-x shadow padding-y-1 full-width">
+    <nav class="flex-x flex-y-center shadow padding-y-1 full-width">
         <div class="logo margin-l-3"><a href="index.html">P<span class="tracking-in-contract">roperty Pro</span></a></div>
         <!-- navigation -->
         <div id="logged-out" class="margin-l-auto margin-r-3 d-flex">
@@ -48,161 +48,20 @@
             <div class="padding-1 border-radius full-width white shadow-top  margin-b-6 margin-t-n6">
                 <div class="d-flex">
                     <div class="margin-y-3 full-width">
-                        <div class="margin-x-3 margin-t-n5"><span class="h4 btn teal round">Featured property</span>
+                        <div class="margin-x-3 margin-t-n5"><span class="h4 btn teal round">Popular property</span>
                             <div class="float-right d-flex">
                                 <a onclick="popular()" class="btn blue margin-x-2"><i class="pro-fire-lite margin-r-1"></i>Popular</a>
-                                <a onclick="featured()" class="btn blue  margin-x-2"><i class="pro-power-lite margin-r-1"></i>featured</a>
                                 <a onclick="latest()" class="btn blue  margin-x-2"><i class="pro-alarm-lite margin-r-1"></i>Latest</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card-wrapper flex-center">
-                    <div class="card">
-                        <div class="card-body">
-                            <span class="white shadow price-tag">$105000</span>
-                            <a href="oneAd.html"><img src="https://res.cloudinary.com/dbe1sfmr4/image/upload/v1562085549/house4_dzlwlf.jpg" alt="Avatar" style="width:100%"></a>
-                        </div>
-                        <div class="card-foot">
-                            <div class="d-flex padding-2">
-                                <p>5-bedroom</p>
-                                <a class="margin-l-auto orange-txt" onclick="signin()">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <span class="white shadow price-tag">$105000</span>
-                            <a href="oneAd.html"><img src="https://res.cloudinary.com/dbe1sfmr4/image/upload/v1562085549/house4_dzlwlf.jpg" alt="Avatar" style="width:100%"></a>
-                        </div>
-                        <div class="card-foot">
-                            <div class="d-flex padding-2">
-                                <p>5-bedroom</p>
-                                <a class="margin-l-auto orange-txt" onclick="signin()">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <span class="white shadow price-tag">$105000</span>
-                            <a href="oneAd.html"><img src="https://res.cloudinary.com/dbe1sfmr4/image/upload/v1562085549/house4_dzlwlf.jpg" alt="Avatar" style="width:100%"></a>
-                        </div>
-                        <div class="card-foot">
-                            <div class="d-flex padding-2">
-                                <p>5-bedroom</p>
-                                <a class="margin-l-auto orange-txt" onclick="signin()">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <span class="white shadow price-tag">$105000</span>
-                            <a href="oneAd.html"><img src="https://res.cloudinary.com/dbe1sfmr4/image/upload/v1562085549/house4_dzlwlf.jpg" alt="Avatar" style="width:100%"></a>
-                        </div>
-                        <div class="card-foot">
-                            <div class="d-flex padding-2">
-                                <p>5-bedroom</p>
-                                <a class="margin-l-auto orange-txt" onclick="signin()">Details</a>
-                            </div>
-                        </div>
-                    </div>
+                <div id="popular" class="card-wrapper flex-center">
+                   <!-- popular ads -->
                 </div>
-                <h2 class="margin-l-3">popular Property</h2>
-                <div class="card-wrapper flex-center">
-                    <div class="card">
-                        <div class="card-body">
-                            <span class="white shadow price-tag">$105000</span>
-                            <a href="oneAd.html"><img src="https://res.cloudinary.com/dbe1sfmr4/image/upload/v1562085549/house4_dzlwlf.jpg" alt="Avatar" style="width:100%"></a>
-                        </div>
-                        <div class="card-foot">
-                            <div class="d-flex padding-2">
-                                <p>5-bedroom</p>
-                                <a class="margin-l-auto orange-txt" onclick="signin()">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <span class="white shadow price-tag">$105000</span>
-                            <a href="oneAd.html"><img src="https://res.cloudinary.com/dbe1sfmr4/image/upload/v1562085549/house4_dzlwlf.jpg" alt="Avatar" style="width:100%"></a>
-                        </div>
-                        <div class="card-foot">
-                            <div class="d-flex padding-2">
-                                <p>5-bedroom</p>
-                                <a class="margin-l-auto orange-txt" onclick="signin()">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <span class="white shadow price-tag">$105000</span>
-                            <a href="oneAd.html"><img src="https://res.cloudinary.com/dbe1sfmr4/image/upload/v1562085549/house4_dzlwlf.jpg" alt="Avatar" style="width:100%"></a>
-                        </div>
-                        <div class="card-foot">
-                            <div class="d-flex padding-2">
-                                <p>5-bedroom</p>
-                                <a class="margin-l-auto orange-txt" onclick="signin()">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <span class="white shadow price-tag">$105000</span>
-                            <a href="oneAd.html"><img src="https://res.cloudinary.com/dbe1sfmr4/image/upload/v1562085549/house4_dzlwlf.jpg" alt="Avatar" style="width:100%"></a>
-                        </div>
-                        <div class="card-foot">
-                            <div class="d-flex padding-2">
-                                <p>5-bedroom</p>
-                                <a class="margin-l-auto orange-txt" onclick="signin()">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <h2 class="margin-l-3">latest Property</h2>
-                <div class="card-wrapper flex-center">
-                    <div class="card">
-                        <div class="card-body">
-                            <span class="white shadow price-tag">$105000</span>
-                            <a class="bg-imgs" href="oneAd.html"><img src="https://res.cloudinary.com/dbe1sfmr4/image/upload/v1562085549/house4_dzlwlf.jpg" alt="Avatar" style="width:100%"></a>
-                        </div>
-                        <div class="card-foot flex-y">
-                            <div class="ad-hero">
-                                <span class="sm-font"><i class="pro-eye-lite margin-l-3 red-txt margin-r-1"></i>500 views</span>
-                                <span class="sm-font"><i class="pro-location-lite margin-l-3 margin-r-1"></i>Kampala</span>
-                            </div>
-                            <div class="d-flex padding-2">
-                                <p>5-bedroom</p>
-                                <a class="margin-l-auto orange-txt" onclick="signin()">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                            <!-- <span class="timeago" datetime="2019-08-19T08:22:22.098Z">about 20 hours ago</span> -->
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <span class="white shadow price-tag">$105000</span>
-                            <a href="oneAd.html"><img src="https://res.cloudinary.com/dbe1sfmr4/image/upload/v1562085549/house4_dzlwlf.jpg" alt="Avatar" style="width:100%"></a>
-                        </div>
-                        <div class="card-foot">
-                            <div class="d-flex padding-2">
-                                <p>5-bedroom</p>
-                                <a class="margin-l-auto orange-txt" onclick="signin()">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <span class="white shadow price-tag">$105000</span>
-                            <a href="oneAd.html"><img src="https://res.cloudinary.com/dbe1sfmr4/image/upload/v1562085549/house4_dzlwlf.jpg" alt="Avatar" style="width:100%"></a>
-                        </div>
-                        <div class="card-foot">
-                            <div class="d-flex padding-2">
-                                <p>5-bedroom</p>
-                                <a class="margin-l-auto orange-txt" onclick="signin()">Details</a>
-                            </div>
-                        </div>
-                    </div>
+                <h2 class="margin-l-3">Latest Property</h2>
+                <div id="latest" class="card-wrapper flex-center">
+                    <!-- Latest ads -->
                 </div>
             </div>
         </div>
@@ -244,9 +103,12 @@
             </form>
         </div>
     </div>
+    <script src="./assets/js/fetch/variables.js"></script>
     <script src="./assets/js/app.js"></script>
     <script src="assets/js/fetch/auth.js"></script>
     <script src="./assets/js/fetch/my-account.js"></script>
+    <script src="./assets/js/fetch/landing-ads.js"></script>
+    <script src="./assets/js/fetch/data.js"></script>
 </body>
 
 </html>

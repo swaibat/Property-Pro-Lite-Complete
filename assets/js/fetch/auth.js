@@ -1,5 +1,3 @@
-
-const authUrl = 'http://localhost:3000/api/v2/users/auth';
 // authentication
 document.getElementById('createUser').addEventListener('submit', createUser);
 document.getElementById('userSignin').addEventListener('submit', userSignin);
@@ -14,7 +12,7 @@ function createUser(e) {
   const password = document.querySelector('.password').value;
   const phonenumber = document.getElementById('phoneNumber').value;
   const address = document.getElementById('address').value;
-  fetch(`${authUrl}/signup`, {
+  fetch(`${document.api.users_url}/signup`, {
     method: 'POST',
     headers: {
       Accept: 'application/json, text/plain , */*',
@@ -33,6 +31,7 @@ function createUser(e) {
     .then(response => response.json())
     .then((data) => {
       if (data.status === 201) {
+        localStorage.setItem('token', data.data.token);
         document.querySelector('.color').classList.add('green');
         document.querySelector('#signup').classList.remove('visible');
         document.getElementById('flash-txt').innerHTML = data.message;
@@ -54,11 +53,11 @@ function userSignin(e) {
   e.preventDefault();
   const email = document.getElementById('email').value;
   const password = document.querySelector('#password').value;
-  fetch(`${authUrl}/signin`, {
+  fetch(`${document.api.users_url}/signin`, {
     method: 'POST',
     headers: {
       Accept: 'application/json, text/plain , */*',
-      'content-type': 'application/json',
+      'content-type': 'multipart/form-data',
     },
     body: JSON.stringify({
       email,
@@ -66,10 +65,9 @@ function userSignin(e) {
     }),
   })
     .then(response => response.json())
-
     .then((data) => {
-      localStorage.setItem('token', data.data.token);
       if (data.status === 200) {
+        localStorage.setItem('token', data.data.token);
         document.querySelector('.color').classList.add('green');
         document.querySelector('#signup').classList.remove('visible');
         document.getElementById('flash-txt').innerHTML = data.message;

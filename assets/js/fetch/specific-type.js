@@ -1,5 +1,5 @@
 
-fetch(`http://localhost:3000/api/v2/property?type=${location.href.split('=')[1]}`)
+fetch(`${document.api.ads_url}?type=${location.href.split('=')[1]}`)
 .then(response => response.json())
 .then((e) => {
   if (e.status === 403) location.replace('index.html');

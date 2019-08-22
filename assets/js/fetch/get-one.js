@@ -1,4 +1,4 @@
-fetch(`http://localhost:3000/api/v2/property/${JSON.parse(location.href.split('=')[1])}`)
+fetch(`${document.api.ads_url}/${JSON.parse(location.href.split('=')[1])}`)
         .then((response) => response.json())
         .then((e) => {
             // if (e.status === 403) location.replace("index.html")
@@ -23,19 +23,19 @@ fetch(`http://localhost:3000/api/v2/property/${JSON.parse(location.href.split('=
             <table>
                 <tbody>
                     <tr>
-                        <td class="left"><i class="pro-phone-lite margin-r-2"></i>${e.data[0].owner.phonenumber}</td>
+                        <td class="left"><i class="pro-phone-lite margin-r-2"></i><span>${e.data[0].owner.phonenumber}</span></td>
                     </tr>
                     <tr>
                         <td  class="left"><i class="pro-envelop-lite margin-r-2"></i><span id="ownerEmail">${e.data[0].owner.email}</span></td>
                     </tr>
                     <tr>
-                        <td class="left"><i class="pro-map-placeholder-dark-symbol-lite margin-r-2"></i>${e.data[0].owner.address}</td>
+                        <td class="left"><i class="pro-map-placeholder-dark-symbol-lite margin-r-2"></i><span>${e.data[0].owner.address}</span></td>
                     </tr>
                     <tr>
-                        <td class="left">Reg Date: ${e.data[0].owner.createdon.split('T')[0]}</td>
+                        <td class="left"><span>Reg Date: ${e.data[0].owner.createdon.split('T')[0]}</span></td>
                     </tr>
                     <tr>
-                        <td class="left">Reg: 1/2/2019</td>
+                        <td class="left"><span>Reg: 1/2/2019</span></td>
                     </tr>
                 </tbody>
             </table>

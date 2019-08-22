@@ -15,7 +15,7 @@ function createProperty(e) {
     formData.append('imageUrl', photos.files[i]);
   }
 
-  fetch('http://localhost:3000/api/v2/property', {
+  fetch(document.api.ads_url, {
     method: 'POST',
     headers: {
       authorization: `Bearer ${localStorage.getItem('token')}`,

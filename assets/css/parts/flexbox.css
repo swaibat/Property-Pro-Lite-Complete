@@ -51,7 +51,7 @@
 
 .flex-y-center {
   display: flex;
-  align-items: flex-start;
+  align-items: center !important;
 }
 
 .flex-y-end {
