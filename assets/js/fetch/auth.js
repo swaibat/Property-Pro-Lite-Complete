@@ -12,7 +12,7 @@ function createUser(e) {
   const password = document.querySelector('.password').value;
   const phonenumber = document.getElementById('phoneNumber').value;
   const address = document.getElementById('address').value;
-  fetch(`${document.api.users_url}/signup`, {
+  fetch(`${document.api.users_url}/auth/signup`, {
     method: 'POST',
     headers: {
       Accept: 'application/json, text/plain , */*',
@@ -53,17 +53,17 @@ function userSignin(e) {
   e.preventDefault();
   const email = document.getElementById('email').value;
   const password = document.querySelector('#password').value;
-  fetch(`${document.api.users_url}/signin`, {
-    method: 'POST',
-    headers: {
-      Accept: 'application/json, text/plain , */*',
-      'content-type': 'multipart/form-data',
-    },
-    body: JSON.stringify({
-      email,
-      password,
-    }),
-  })
+  fetch('http://localhost:3000/api/v2/users/auth/signin', {
+method: 'POST',
+headers: {
+  Accept: 'application/json, text/plain , */*',
+  'content-type': 'application/json',
+},
+body: JSON.stringify({
+  email,
+  password,
+}),
+})
     .then(response => response.json())
     .then((data) => {
       if (data.status === 200) {

@@ -10,7 +10,7 @@
 <body id="loader" class="loader white ">
     <div id="bg"></div>
     <!-- start of navigation -->
-    <nav class="flex-x flex-y-center shadow padding-y-1 full-width">
+    <nav class="flex-x flex-y-center fixed-top shadow padding-y-1 full-width">
         <div class="logo margin-l-3"><a href="index.html">P<span class="tracking-in-contract">roperty Pro</span></a></div>
         <!-- navigation -->
         <div id="logged-out" class="margin-l-auto margin-r-3 d-flex">
@@ -20,16 +20,20 @@
             </div>
         </div>
         <div id="logged-in" class="d-none margin-l-auto margin-r-3 flex-x">
-                <button id="avatar" class="collapsible padding-t-1 d-flex btn">
-                    <span class="padding-r-2 margin-t-1">My account</span>
-                    <img id="nav-avatar" class="circle" src="./assets/img/user.svg" height="35" width="35" alt="user">
-                </button>
-                <ul class="drop-content swing-in-top-fwd white d-none padding-2 shadow">
-                    <li class="padding-y-2"><i class="pro-enter-lite margin-x-2"></i>my account</li>
-                    <li class="padding-y-2"><a><i class="pro-info-lite margin-x-2"></i>profile</a></li>
-                    <li class="padding-y-2"><a><i class="pro-cog-lite margin-x-2"></i>Setting</a></li>
-                </ul>
-                <button type="button" onclick="toggle()" class="btn mobile-view"><span class="humberger">&#8942;</span></button>
+            <button class="btn blue-txt favorite flex-y-center">
+                <i class="pro-like-lite"></i>
+                <span class="badge">0</span>
+            </button>
+            <button id="avatar" class="collapsible padding-t-1 d-flex btn">
+                <span class="padding-r-2 margin-t-1">My account</span>
+                <img  class="circle" src="./assets/img/user.svg" height="35" width="35" alt="user">
+            </button>
+            <ul class="drop-content swing-in-top-fwd white d-none padding-2 shadow">
+                <li class="padding-y-2"><i class="pro-enter-lite margin-x-2"></i>my account</li>
+                <li class="padding-y-2"><a><i class="pro-info-lite margin-x-2"></i>profile</a></li>
+                <li class="padding-y-2"><a><i class="pro-cog-lite margin-x-2"></i>Setting</a></li>
+            </ul>
+            <button type="button" onclick="toggle()" class="btn mobile-view"><span class="humberger">&#8942;</span></button>
         </div>
     </nav>
     <!-- //navigation -->
@@ -46,20 +50,19 @@
                 </div>
             </div>
             <div class="padding-1 border-radius full-width white shadow-top  margin-b-6 margin-t-n6">
-                <div class="d-flex">
-                    <div class="margin-y-3 full-width">
-                        <div class="margin-x-3 margin-t-n5"><span class="h4 btn teal round">Popular property</span>
-                            <div class="float-right d-flex">
-                                <a onclick="popular()" class="btn blue margin-x-2"><i class="pro-fire-lite margin-r-1"></i>Popular</a>
-                                <a onclick="latest()" class="btn blue  margin-x-2"><i class="pro-alarm-lite margin-r-1"></i>Latest</a>
-                            </div>
-                        </div>
+                <div class="land-roll flex-y-center">
+                    <span class="btn teal round">Popular</span>
+                    <div class="margin-l-auto d-flex">
+                        <a onclick="popular()" class="btn blue margin-x-2"><i class="pro-fire-lite margin-r-1"></i>Popular</a>
+                        <a onclick="latest()" class="btn blue  margin-x-2"><i class="pro-alarm-lite margin-r-1"></i>Latest</a>
                     </div>
                 </div>
                 <div id="popular" class="card-wrapper flex-center">
                    <!-- popular ads -->
                 </div>
-                <h2 class="margin-l-3">Latest Property</h2>
+                <div class="land-roll flex-y-center margin-y-2 top-border">
+                    <span class="btn teal round">Latest</span>
+                </div>
                 <div id="latest" class="card-wrapper flex-center">
                     <!-- Latest ads -->
                 </div>
@@ -110,5 +113,4 @@
     <script src="./assets/js/fetch/landing-ads.js"></script>
     <script src="./assets/js/fetch/data.js"></script>
 </body>
-
 </html>

@@ -20,7 +20,7 @@ fetch(`${document.api.users_url}/myAccount`, {
         document.getElementById('logged-in').classList.add('d-none');
       }
     }
-
+    document.querySelector('#fav-counter').innerHTML = e.data.details.favourite.length-1;
     document.getElementById('avatar').src = e.data.details.avatar;
     document.getElementById('nav-avatar').src = e.data.details.avatar;
     let ads = '';
@@ -101,3 +101,33 @@ function patchProperty() {
       }
     });
 }
+
+
+window.addEventListener('load', function () {
+  const favs = document.querySelectorAll(".fav-btn")
+
+  for(var i = 0; i < favs.length; i++){
+      favs[i].addEventListener("click", function() {
+      fetch(`${document.api.ads_url}/${this.id}/favourite`,{
+          headers: {
+            authorization: `Bearer ${localStorage.getItem('token')}`,
+            Accept: 'application/json, text/plain , */*',
+              'content-type': 'application/json',
+          }
+        })
+        .then(response => response.json())
+        .then((data) => {
+          if (data.status === 200) {
+            agentAccess();
+            document.querySelector('.color').classList.add('green');
+            document.querySelector('#signup').classList.remove('visible');
+            document.getElementById('flash-txt').innerHTML = data.error || data.message;
+          } else {
+            errorMe();
+            document.querySelector('.color').classList.add('red');
+            document.getElementById('flash-txt').innerHTML = data.error || data.message;
+          }
+        });
+    })
+  }
+});

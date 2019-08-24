@@ -4,15 +4,11 @@
 /* product card */
 
 .card {
-  width: 30%;
-  min-width: 200px;
   border: solid 1px rgb(238, 237, 237);
   margin: 10px;
   box-shadow: var(--shadow);
   border-radius: .7rem;
-  overflow: hidden;
   background: white;
-  
   position: relative;
 }
 
@@ -50,17 +46,19 @@ background-image: linear-gradient(to bottom ,rgba(45, 45, 45, 0.3),rgb(4, 4, 4))
   border-radius: 1px 1px 10px 10px;
   margin-left: 10px;
   z-index: 1;
+  font-size: small;
 }
 
 .card img {
-  height: 150px !important;
+  height: 150px;
   cursor: pointer;
   width: 100%;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 .ad-hero{
   position: absolute;
-  margin-top: -1.3rem;
+  margin-top: -1.6rem;
   color: #f4f2f2;
   width: 100%;
   left: 0;
@@ -73,7 +71,7 @@ background-image: linear-gradient(to bottom ,rgba(45, 45, 45, 0.3),rgb(4, 4, 4))
 }
 
 .card-foot {
-  box-shadow: 0 4px 30px 0 rgba(4, 4, 4, 0.99), 0 4px 40px 0 rgba(0, 0, 0, 0.19);
+  padding: .4rem 0 0.4rem .5rem;
 }
 
 .price {
@@ -280,12 +278,6 @@ th {
       font-weight: normal;
       font-size: 12px;
   }
-}
-
-.badge {
-  padding: .5rem;
-  background: #c2c2c2;
-  color: #fff;
 }
 
 .value-holder {

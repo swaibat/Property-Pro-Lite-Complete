@@ -19,10 +19,18 @@
                 <button onclick="signup()" class="btn white blue-txt btn-lg margin-l-4">signup</button>
             </div>
         </div>
-        <div id="logged-in" class="d-none margin-l-auto margin-r-3 flex-x">
+        <div id="logged-in" class="margin-l-auto flex-y-center margin-r-3 flex-x">
+            <button class="btn fav">
+                <span class="fav-dis flex-y-center">
+                    <i id="love" class="pro-like-lite"></i>
+                    <img class="fav-img invisible" src="">
+                    <span id="fav-counter" class="badge">0</span>
+                </span>
+            </button>
+            
             <button id="avatar" class="collapsible padding-t-1 d-flex btn">
                 <span class="padding-r-2 margin-t-1">My account</span>
-                <img id="nav-avatar" class="circle" src="./assets/img/user.svg" height="35" width="35" alt="user">
+                <img  class="circle" src="./assets/img/user.svg" height="35" width="35" alt="user">
             </button>
             <ul class="drop-content swing-in-top-fwd white d-none padding-2 shadow">
                 <li class="padding-y-2"><i class="pro-enter-lite margin-x-2"></i>my account</li>
@@ -36,18 +44,306 @@
     <!-- start of main content -->
     <main role="main">
         <div class="padding-1 page-container ">
-            <h3 class="page-title margin-l-2"><i class="pro-stack-lite margin-r-2"></i> All property</h3>
+            <div class="wrap-title flex-y-center margin-x-2">
+                <h3 class="page-title margin-l-1"><i class="pro-stack-lite margin-r-2"></i> All property</h3>
+                <form class="margin-l-auto d-flex" autocomplete="off">
+                    <div class="autocomplete">
+                        <input id="myInput" type="text" onkeyup="myFunction()" placeholder="Quick seach ...">
+                    </div>
+                    <select id="type" required>
+                        <option value="singlerooms">singlerooms</option>
+                        <option value="3bedrooms">3bedrooms</option>
+                        <option value="5bedrooms">5bedrooms</option>
+                        <option value="miniflat">miniFlat</option>
+                        <option value="others">others</option>
+                    </select>
+                    <a class="btn teal"><i class="pro-search-lite margin-r-1"></i></a>
+                </form>
+            </div>
             <div class="sub-container margin-2">
-                <div id="all-ads" class="card-wrapper flex-center"></div>
+                <div id="all-ads" class="main">
+                        <div class="card" style="">
+                                <div class="card-body">
+                                    <span class="white shadow price-tag">$4500000</span>
+                                    <a href="oneAd.html?id=5"><img class="card-img" src="http://res.cloudinary.com/dbe1sfmr4/image/upload/v1566090017/ednu8afesg3suv2vgdcm.jpg" alt="3bedrooms"></a>
+                                </div>
+                                <div class="card-foot flex-y">
+                                    <div class="ad-hero bg-imgs">
+                                        <span class="img-size">
+                                            <span class="sm-font">2<i class="pro-camera-lite margin-l-1"></i></span>
+                                        </span>
+                                        <span class="sm-font"><i class="pro-eye-lite red-txt margin-r-1"></i>94 views</span>
+                                        <span id="city" class="sm-font margin-r-2"><i class="pro-map-placeholder-dark-symbol-lite margin-r-1"></i>kigali</span>
+                                    </div>
+                                    <div class="card-footer justify-btn flex-y-center">
+                                        <p id="type">4bedrooms</p>
+                                        <span>
+                                            <a id="5" class="fav-btn btn orange-txt"><i class="pro-like-lite"></i></a>
+                                            <a href="oneAd.html?id=5" class="btn orange-txt"><i class="pro-earth-lite"></i></a>
+                                        </span>     
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card" >
+                                    <div class="card-body">
+                                        <span class="white shadow price-tag">$4500000</span>
+                                        <a href="oneAd.html?id=5"><img src="http://res.cloudinary.com/dbe1sfmr4/image/upload/v1566090017/ednu8afesg3suv2vgdcm.jpg" alt="3bedrooms"></a>
+                                    </div>
+                                    <div class="card-foot flex-y">
+                                        <div class="ad-hero bg-imgs">
+                                            <span class="img-size">
+                                                <span class="sm-font">2<i class="pro-camera-lite margin-l-1"></i></span>
+                                            </span>
+                                            <span class="sm-font"><i class="pro-eye-lite red-txt margin-r-1"></i>94 views</span>
+                                            <span id="city" class="sm-font margin-r-2"><i class="pro-map-placeholder-dark-symbol-lite margin-r-1"></i>kigali</span>
+                                        </div>
+                                        <div class="card-footer justify-btn flex-y-center">
+                                            <p id="type">5bedrooms</p>
+                                            <span>
+                                                <a id="5" class="fav-btn btn orange-txt"><i class="pro-like-lite"></i></a>
+                                                <a href="oneAd.html?id=5" class="btn orange-txt"><i class="pro-earth-lite"></i></a>
+                                            </span>     
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" >
+                                    <div class="card-body">
+                                        <span class="white shadow price-tag">$4500000</span>
+                                        <a href="oneAd.html?id=5"><img src="http://res.cloudinary.com/dbe1sfmr4/image/upload/v1566090017/ednu8afesg3suv2vgdcm.jpg" alt="3bedrooms"></a>
+                                    </div>
+                                    <div class="card-foot flex-y">
+                                        <div class="ad-hero bg-imgs">
+                                            <span class="img-size">
+                                                <span class="sm-font">2<i class="pro-camera-lite margin-l-1"></i></span>
+                                            </span>
+                                            <span class="sm-font"><i class="pro-eye-lite red-txt margin-r-1"></i>94 views</span>
+                                            <span id="city" class="sm-font margin-r-2"><i class="pro-map-placeholder-dark-symbol-lite margin-r-1"></i>kigali</span>
+                                        </div>
+                                        <div class="card-footer justify-btn flex-y-center">
+                                            <p id="type">5bedrooms</p>
+                                            <span>
+                                                <a id="5" class="fav-btn btn orange-txt"><i class="pro-like-lite"></i></a>
+                                                <a href="oneAd.html?id=5" class="btn orange-txt"><i class="pro-earth-lite"></i></a>
+                                            </span>     
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" >
+                                    <div class="card-body">
+                                        <span class="white shadow price-tag">$4500000</span>
+                                        <a href="oneAd.html?id=5"><img src="http://res.cloudinary.com/dbe1sfmr4/image/upload/v1566090017/ednu8afesg3suv2vgdcm.jpg" alt="3bedrooms"></a>
+                                    </div>
+                                    <div class="card-foot flex-y">
+                                        <div class="ad-hero bg-imgs">
+                                            <span class="img-size">
+                                                <span class="sm-font">2<i class="pro-camera-lite margin-l-1"></i></span>
+                                            </span>
+                                            <span class="sm-font"><i class="pro-eye-lite red-txt margin-r-1"></i>94 views</span>
+                                            <span id="city" class="sm-font margin-r-2"><i class="pro-map-placeholder-dark-symbol-lite margin-r-1"></i>kigali</span>
+                                        </div>
+                                        <div class="card-footer justify-btn flex-y-center">
+                                            <p id="type">5bedrooms</p>
+                                            <span>
+                                                <a id="5" class="fav-btn btn orange-txt"><i class="pro-like-lite"></i></a>
+                                                <a href="oneAd.html?id=5" class="btn orange-txt"><i class="pro-earth-lite"></i></a>
+                                            </span>     
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" >
+                                    <div class="card-body">
+                                        <span class="white shadow price-tag">$4500000</span>
+                                        <a href="oneAd.html?id=5"><img src="http://res.cloudinary.com/dbe1sfmr4/image/upload/v1566090017/ednu8afesg3suv2vgdcm.jpg" alt="3bedrooms"></a>
+                                    </div>
+                                    <div class="card-foot flex-y">
+                                        <div class="ad-hero bg-imgs">
+                                            <span class="img-size">
+                                                <span class="sm-font">2<i class="pro-camera-lite margin-l-1"></i></span>
+                                            </span>
+                                            <span class="sm-font"><i class="pro-eye-lite red-txt margin-r-1"></i>94 views</span>
+                                            <span id="city" class="sm-font margin-r-2"><i class="pro-map-placeholder-dark-symbol-lite margin-r-1"></i>kigali</span>
+                                        </div>
+                                        <div class="card-footer justify-btn flex-y-center">
+                                            <p id="type">5bedrooms</p>
+                                            <span>
+                                                <a id="5" class="fav-btn btn orange-txt"><i class="pro-like-lite"></i></a>
+                                                <a href="oneAd.html?id=5" class="btn orange-txt"><i class="pro-earth-lite"></i></a>
+                                            </span>     
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" >
+                                    <div class="card-body">
+                                        <span class="white shadow price-tag">$4500000</span>
+                                        <a href="oneAd.html?id=5"><img src="http://res.cloudinary.com/dbe1sfmr4/image/upload/v1566090017/ednu8afesg3suv2vgdcm.jpg" alt="3bedrooms"></a>
+                                    </div>
+                                    <div class="card-foot flex-y">
+                                        <div class="ad-hero bg-imgs">
+                                            <span class="img-size">
+                                                <span class="sm-font">2<i class="pro-camera-lite margin-l-1"></i></span>
+                                            </span>
+                                            <span class="sm-font"><i class="pro-eye-lite red-txt margin-r-1"></i>94 views</span>
+                                            <span id="city" class="sm-font margin-r-2"><i class="pro-map-placeholder-dark-symbol-lite margin-r-1"></i>kigali</span>
+                                        </div>
+                                        <div class="card-footer justify-btn flex-y-center">
+                                            <p id="type">5bedrooms</p>
+                                            <span>
+                                                <a id="5" class="fav-btn btn orange-txt"><i class="pro-like-lite"></i></a>
+                                                <a href="oneAd.html?id=5" class="btn orange-txt"><i class="pro-earth-lite"></i></a>
+                                            </span>     
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" >
+                                    <div class="card-body">
+                                        <span class="white shadow price-tag">$4500000</span>
+                                        <a href="oneAd.html?id=5"><img src="http://res.cloudinary.com/dbe1sfmr4/image/upload/v1566090017/ednu8afesg3suv2vgdcm.jpg" alt="3bedrooms"></a>
+                                    </div>
+                                    <div class="card-foot flex-y">
+                                        <div class="ad-hero bg-imgs">
+                                            <span class="img-size">
+                                                <span class="sm-font">2<i class="pro-camera-lite margin-l-1"></i></span>
+                                            </span>
+                                            <span class="sm-font"><i class="pro-eye-lite red-txt margin-r-1"></i>94 views</span>
+                                            <span id="city" class="sm-font margin-r-2"><i class="pro-map-placeholder-dark-symbol-lite margin-r-1"></i>kigali</span>
+                                        </div>
+                                        <div class="card-footer justify-btn flex-y-center">
+                                            <p id="type">5bedrooms</p>
+                                            <span>
+                                                <a id="5" class="fav-btn btn orange-txt"><i class="pro-like-lite"></i></a>
+                                                <a href="oneAd.html?id=5" class="btn orange-txt"><i class="pro-earth-lite"></i></a>
+                                            </span>     
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" >
+                                    <div class="card-body">
+                                        <span class="white shadow price-tag">$4500000</span>
+                                        <a href="oneAd.html?id=5"><img src="http://res.cloudinary.com/dbe1sfmr4/image/upload/v1566090017/ednu8afesg3suv2vgdcm.jpg" alt="3bedrooms"></a>
+                                    </div>
+                                    <div class="card-foot flex-y">
+                                        <div class="ad-hero bg-imgs">
+                                            <span class="img-size">
+                                                <span class="sm-font">2<i class="pro-camera-lite margin-l-1"></i></span>
+                                            </span>
+                                            <span class="sm-font"><i class="pro-eye-lite red-txt margin-r-1"></i>94 views</span>
+                                            <span id="city" class="sm-font margin-r-2"><i class="pro-map-placeholder-dark-symbol-lite margin-r-1"></i>kigali</span>
+                                        </div>
+                                        <div class="card-footer justify-btn flex-y-center">
+                                            <p id="type">5bedrooms</p>
+                                            <span>
+                                                <a id="5" class="fav-btn btn orange-txt"><i class="pro-like-lite"></i></a>
+                                                <a href="oneAd.html?id=5" class="btn orange-txt"><i class="pro-earth-lite"></i></a>
+                                            </span>     
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" >
+                                    <div class="card-body">
+                                        <span class="white shadow price-tag">$4500000</span>
+                                        <a href="oneAd.html?id=5"><img src="http://res.cloudinary.com/dbe1sfmr4/image/upload/v1566090017/ednu8afesg3suv2vgdcm.jpg" alt="3bedrooms"></a>
+                                    </div>
+                                    <div class="card-foot flex-y">
+                                        <div class="ad-hero bg-imgs">
+                                            <span class="img-size">
+                                                <span class="sm-font">2<i class="pro-camera-lite margin-l-1"></i></span>
+                                            </span>
+                                            <span class="sm-font"><i class="pro-eye-lite red-txt margin-r-1"></i>94 views</span>
+                                            <span id="city" class="sm-font margin-r-2"><i class="pro-map-placeholder-dark-symbol-lite margin-r-1"></i>kigali</span>
+                                        </div>
+                                        <div class="card-footer justify-btn flex-y-center">
+                                            <p id="type">5bedrooms</p>
+                                            <span>
+                                                <a id="5" class="fav-btn btn orange-txt"><i class="pro-like-lite"></i></a>
+                                                <a href="oneAd.html?id=5" class="btn orange-txt"><i class="pro-earth-lite"></i></a>
+                                            </span>     
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" >
+                                    <div class="card-body">
+                                        <span class="white shadow price-tag">$4500000</span>
+                                        <a href="oneAd.html?id=5"><img src="http://res.cloudinary.com/dbe1sfmr4/image/upload/v1566090017/ednu8afesg3suv2vgdcm.jpg" alt="3bedrooms"></a>
+                                    </div>
+                                    <div class="card-foot flex-y">
+                                        <div class="ad-hero bg-imgs">
+                                            <span class="img-size">
+                                                <span class="sm-font">2<i class="pro-camera-lite margin-l-1"></i></span>
+                                            </span>
+                                            <span class="sm-font"><i class="pro-eye-lite red-txt margin-r-1"></i>94 views</span>
+                                            <span id="city" class="sm-font margin-r-2"><i class="pro-map-placeholder-dark-symbol-lite margin-r-1"></i>kigali</span>
+                                        </div>
+                                        <div class="card-footer justify-btn flex-y-center">
+                                            <p id="type">5bedrooms</p>
+                                            <span>
+                                                <a id="5" class="fav-btn btn orange-txt"><i class="pro-like-lite"></i></a>
+                                                <a href="oneAd.html?id=5" class="btn orange-txt"><i class="pro-earth-lite"></i></a>
+                                            </span>     
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" >
+                                    <div class="card-body">
+                                        <span class="white shadow price-tag">$4500000</span>
+                                        <a href="oneAd.html?id=5"><img src="http://res.cloudinary.com/dbe1sfmr4/image/upload/v1566090017/ednu8afesg3suv2vgdcm.jpg" alt="3bedrooms"></a>
+                                    </div>
+                                    <div class="card-foot flex-y">
+                                        <div class="ad-hero bg-imgs">
+                                            <span class="img-size">
+                                                <span class="sm-font">2<i class="pro-camera-lite margin-l-1"></i></span>
+                                            </span>
+                                            <span class="sm-font"><i class="pro-eye-lite red-txt margin-r-1"></i>94 views</span>
+                                            <span id="city" class="sm-font margin-r-2"><i class="pro-map-placeholder-dark-symbol-lite margin-r-1"></i>kigali</span>
+                                        </div>
+                                        <div class="card-footer justify-btn flex-y-center">
+                                            <p id="type">5bedrooms</p>
+                                            <span>
+                                                <a id="5" class="fav-btn btn orange-txt"><i class="pro-like-lite"></i></a>
+                                                <a href="oneAd.html?id=5" class="btn orange-txt"><i class="pro-earth-lite"></i></a>
+                                            </span>     
+                                        </div>
+                                    </div>
+                                </div>
+                </div>
+                <div id="listingTable"></div>
+                <a href="javascript:prevPage()" id="btn_prev">Prev</a>
+                <a href="javascript:nextPage()" id="btn_next">Next</a>
+                page: <span id="page"></span>
             </div>
         </div>
     </main>
+    <script src="./assets/js/fetch/pagination.js"></script>
+    <script>
+        function myFunction() {
+            // Declare variables
+            var input, filter, adsList, oneAd, a, b,val, i, txtValue;
+            input = document.getElementById('myInput');
+            filter = input.value.toUpperCase();
+            adsList = document.getElementById("all-ads");
+            oneAd = adsList.getElementsByClassName('card');
+
+            for (i = 0; i < oneAd.length; i++) { 
+            a = oneAd[i].getElementsByTagName("p")[0]
+            b = oneAd[i].querySelectorAll("#city")[0]
+            console.log(b.innerHTML)
+            txtValue = b.textContent;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                oneAd[i].style.display = "";
+            } else {
+                oneAd[i].style.display = "none";
+            }
+         }
+        }
+     </script>
+     <script src="./assets/js/fetch/fav.js"></script>
     <footer class="footer white">
         <a class="margin-r-4">Property-lite 2019</a>
     </footer>
+    <script src="./assets/js/fetch/variables.js"></script>
+    <script src="./assets/js/fetch/ads-list.js"></script>
     <script src="./assets/js/fetch/my-account.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtdJ2lMzLN7jGl_KHHWv1UvXrhqExiSUM&libraries=places&callback=initAutocomplete" async defer></script>
-    <script src="./assets/js/fetch/ads-list.js"></script>
     <script src="./assets/js/app.js"></script>
+    
 </body>
 </html>

@@ -1,65 +1,3 @@
-(function(w, d) {
-  function LetterAvatar(name, size) {
-      name = name || '';
-      size = size || 60;
-
-      var colours = ['#556080'],
-          nameSplit = String(name).toUpperCase().split(' '),
-          initials, charIndex, colourIndex, canvas, context, dataURI;
-
-      if (nameSplit.length == 1) {
-          initials = nameSplit[0] ? nameSplit[0].charAt(0) : '?';
-      } else {
-          initials = nameSplit[0].charAt(0) + nameSplit[1].charAt(0);
-      }
-
-      if (w.devicePixelRatio) {
-          size = (size * w.devicePixelRatio);
-      }
-
-      charIndex = (initials == '?' ? 72 : initials.charCodeAt(0)) - 64;
-      colourIndex = charIndex % 20;
-      canvas = d.createElement('canvas');
-      canvas.width = size;
-      canvas.height = size;
-      context = canvas.getContext("2d");
-
-      context.fillStyle = colours[colourIndex - 1];
-      context.fillRect(0, 0, canvas.width, canvas.height);
-      context.font = Math.round(canvas.width / 2) + "px Arial";
-      context.textAlign = "center";
-      context.fillStyle = "#FFF";
-      context.fillText(initials, size / 2, size / 1.5);
-      dataURI = canvas.toDataURL();
-      canvas = null;
-      return dataURI;
-  }
-  LetterAvatar.transform = function() {
-      Array.prototype.forEach.call(d.querySelectorAll('img[alt]'), function(img, name) {
-          name = img.getAttribute('alt');
-          img.src = LetterAvatar(name, img.getAttribute('width'));
-          img.removeAttribute('alt');
-          img.setAttribute('alt', name);
-      });
-  };
-  // AMD support
-  if (typeof define === 'function' && define.amd) {
-      define(function() {
-          return LetterAvatar;
-      });
-      // CommonJS and Node.js module support.
-  } else if (typeof exports !== 'undefined') {
-      if (typeof module != 'undefined' && module.exports) {
-          exports = module.exports = LetterAvatar;
-      }
-      exports.LetterAvatar = LetterAvatar;
-  } else {
-      window.LetterAvatar = LetterAvatar;
-      d.addEventListener('DOMContentLoaded', function(event) {
-          LetterAvatar.transform();
-      });
-  }
-})(window, document);
 
 var i, acc = document.getElementsByClassName("collapsible");
     for (i = 0; i < acc.length; i++) acc[i].addEventListener("click", function() {
@@ -72,14 +10,15 @@ var atto = document.createAttribute("id");
   atto.value = "flash";
 var element = document.querySelector('footer');
 element.appendChild(para).setAttributeNode(atto)
-document.querySelector('#flash').classList.add('flash')
+document.querySelector('#flash').classList.add("flash")
 document.querySelector('#flash').classList.add('d-none')
 document.querySelector('#flash').innerHTML=`
 <div  class="color"></div>
 <span id="flash-txt" class="text"></span>`
 window.addEventListener('load', function () {
-  });
   document.getElementById("loader").classList.remove("loader");
+  });
+  
   function toggle() {
     document.getElementById("collapse-menu").classList.toggle("toggle-class")
     }
