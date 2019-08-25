@@ -7,9 +7,7 @@ fetch(document.api.ads_url)
     latest.forEach((ad) => {
         ads += document.api.ad(ad);
     });
-    document.querySelector('#all-ad').innerHTML = ads;
-    // document.ads = ads
-    
+    document.querySelector('#all-ads').innerHTML = ads;
   });
 
 window.addEventListener('load', function () {
@@ -27,6 +25,7 @@ window.addEventListener('load', function () {
           .then(response => response.json())
           .then((data) => {
             if (data.status !== 200) {
+              
               const counter = document.querySelector('#fav-counter');
               // errorMe();
               // document.querySelector('.color').classList.add('red');

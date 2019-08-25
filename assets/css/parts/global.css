@@ -17,6 +17,7 @@ body {
   min-width: 140px;
   position: absolute;
   margin:3.3rem 0 0 -1rem !important;
+  z-index: 1030;
 }
 a{
   cursor: pointer;
@@ -544,15 +545,42 @@ input:focus {
 }
 
 .autocomplete::before {
-  content: "\68";
+  content: "\64";
   font-family: pct;
   z-index: 1001;
-  font-size: 137px;
+  font-size: 200px;
   line-height: 0;
   color: #fff;
   position: absolute;
-  transform: rotate(90deg);
-  margin-left: -8.8rem;
-  margin-top: .85rem;
+  transform: rotate(900deg);
+  margin-left: -7rem;
+  margin-top: 1rem;
   border-radius: var(--border-radius);
+  z-index: -1;
+}
+
+#modal .pro-info-lite{
+  font-size:50px;
+  color:orange;
+}
+
+.drop-content.favorite-list {
+  min-width: 180px;
+  margin-left: -6.6rem !important;
+}
+
+.fav-item{
+  display: flex;
+  box-shadow: var(--shadow);
+  margin: 1rem .5rem;
+}
+.fav-item img{
+  width:4rem;
+  height: 3rem ;
+}
+
+.badge.del-item {
+  right: 5px;
+  margin-top: -5px;
+  cursor: pointer;
 }

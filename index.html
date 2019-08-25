@@ -10,32 +10,40 @@
 <body id="loader" class="loader white ">
     <div id="bg"></div>
     <!-- start of navigation -->
-    <nav class="flex-x flex-y-center fixed-top shadow padding-y-1 full-width">
-        <div class="logo margin-l-3"><a href="index.html">P<span class="tracking-in-contract">roperty Pro</span></a></div>
-        <!-- navigation -->
-        <div id="logged-out" class="margin-l-auto margin-r-3 d-flex">
-            <div class="d-flex">
-                <button onclick="signin()" class="btn teal white-txt btn-lg margin-l-4">signin</button>
-                <button onclick="signup()" class="btn white blue-txt btn-lg margin-l-4">signup</button>
+    <nav class="flex-x shadow padding-y-1 full-width">
+            <div class="logo margin-l-3"><a href="index.html">P<span class="tracking-in-contract">roperty Pro</span></a></div>
+            <!-- navigation -->
+            <div id="logged-out" class="margin-l-auto margin-r-3 d-flex">
+                <div class="d-flex">
+                    <button onclick="signin()" class="btn teal white-txt btn-lg margin-l-4">signin</button>
+                    <button onclick="signup()" class="btn white blue-txt btn-lg margin-l-4">signup</button>
+                </div>
             </div>
-        </div>
-        <div id="logged-in" class="d-none margin-l-auto margin-r-3 flex-x">
-            <button class="btn blue-txt favorite flex-y-center">
-                <i class="pro-like-lite"></i>
-                <span class="badge">0</span>
-            </button>
-            <button id="avatar" class="collapsible padding-t-1 d-flex btn">
-                <span class="padding-r-2 margin-t-1">My account</span>
-                <img  class="circle" src="./assets/img/user.svg" height="35" width="35" alt="user">
-            </button>
-            <ul class="drop-content swing-in-top-fwd white d-none padding-2 shadow">
-                <li class="padding-y-2"><i class="pro-enter-lite margin-x-2"></i>my account</li>
-                <li class="padding-y-2"><a><i class="pro-info-lite margin-x-2"></i>profile</a></li>
-                <li class="padding-y-2"><a><i class="pro-cog-lite margin-x-2"></i>Setting</a></li>
-            </ul>
-            <button type="button" onclick="toggle()" class="btn mobile-view"><span class="humberger">&#8942;</span></button>
-        </div>
-    </nav>
+            
+            <div class="margin-l-auto margin-r-3 flex-x">
+                    <button class="collapsible btn fav">
+                        <span class="fav-dis flex-y-center">
+                            <i id="love" class="pro-like-lite"></i>
+                            <img class="fav-img invisible" src="">
+                            <span id="fav-counter" class="badge">0</span>
+                        </span>
+                    </button>
+                    <ul id="favorite-list"  class="drop-content favorite-list swing-in-top-fwd white d-none padding-2 shadow">
+                    <!-- favourite list -->
+                    </ul>
+                <button id="avatar" class="collapsible padding-t-1 d-flex btn">
+                    <span class="padding-r-2 margin-t-1">My account</span>
+                    <img id="nav-avatar" class="circle" src="./assets/img/user.svg" height="35" width="35" alt="user">
+                </button>
+                <ul class="drop-content swing-in-top-fwd white d-none padding-2 shadow">
+                    <li class="padding-y-2"><i class="pro-enter-lite margin-x-2"></i>my account</li>
+                    <li class="padding-y-2"><a><i class="pro-info-lite margin-x-2"></i>profile</a></li>
+                    <li class="padding-y-2"><a><i class="pro-cog-lite margin-x-2"></i>Setting</a></li>
+                    <li class="padding-y-2"><a href="index.html"><i class="pro-switch-lite margin-x-2"></i>Logout</a></li>
+                </ul>
+                <button type="button" onclick="toggle()" class="btn mobile-view"><span class="humberger">&#8942;</span></button>
+            </div>
+        </nav>
     <!-- //navigation -->
     <main role="main">
         <div class="flex-y margin-b-6">
@@ -109,8 +117,8 @@
     <script src="./assets/js/fetch/variables.js"></script>
     <script src="./assets/js/app.js"></script>
     <script src="assets/js/fetch/auth.js"></script>
-    <script src="./assets/js/fetch/my-account.js"></script>
     <script src="./assets/js/fetch/landing-ads.js"></script>
-    <script src="./assets/js/fetch/data.js"></script>
+    <script src="./assets/js/fetch/my-account.js"></script>
+    
 </body>
 </html>

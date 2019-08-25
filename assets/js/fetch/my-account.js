@@ -1,6 +1,63 @@
 
+// window.addEventListener('load', function () {
+//   const favs = document.querySelectorAll(".fav-btn")
+//   for(var i = 0; i < favs.length; i++){
+//       favs[i].addEventListener("click", function() {
+//       fetch(`${document.api.ads_url}/${this.id}/favourite`,{
+//           headers: {
+//             authorization: `Bearer ${localStorage.getItem('token')}`,
+//             Accept: 'application/json, text/plain , */*',
+//               'content-type': 'application/json',
+//           }
+//         })
+//         .then(response => response.json())
+//         .then((data) => {
+//           if (data.status === 200) {
+//             agentAccess();
+//             document.querySelector('.color').classList.add('green');
+//             document.querySelector('#signup').classList.remove('visible');
+//             document.getElementById('flash-txt').innerHTML = data.error || data.message;
+//           } else {
+//             errorMe();
+//             document.querySelector('.color').classList.add('red');
+//             document.getElementById('flash-txt').innerHTML = data.error || data.message;
+//           }
+//         });
+//     })
+//   }
+// });
+// remove item from favourite
 
-
+// const favId = document.querySelectorAll(".del-item").parentNode;
+window.addEventListener('load', function () {
+  const delFavs = document.querySelectorAll(".del-item")
+for(var i = 0; i < delFavs.length; i++){
+  delFavs[i].addEventListener("click", function() {
+    document.querySelector('#fav-counter').textContent --;
+    const item = this.parentNode.parentNode
+    item.classList.add('d-none')
+    fetch(`${document.api.ads_url}/${item.id}/favourite`,{
+       method: 'PATCH',
+        headers: {
+          authorization: `Bearer ${localStorage.getItem('token')}`,
+          Accept: 'application/json, text/plain , */*',
+            'content-type': 'application/json',
+        }
+      })
+      .then(response => response.json())
+      .then((data) => {
+        if (data.status === 200) {
+          document.querySelector('.color').classList.add('green');
+          document.querySelector('#signup').classList.remove('visible');
+          document.getElementById('flash-txt').innerHTML = data.error || data.message;
+        } else {
+          document.querySelector('.color').classList.add('red');
+          document.getElementById('flash-txt').innerHTML = data.error || data.message;
+        }
+      });
+  })
+}
+})
 // get account information
 fetch(`${document.api.users_url}/myAccount`, {
   method: 'GET',
@@ -11,16 +68,36 @@ fetch(`${document.api.users_url}/myAccount`, {
   .then(response => response.json())
   .then((e) => {
     if (e.status === 404) document.getElementById('ads').innerHTML = data.error;
-    if (location.href.toString().match(/index|adsList|oneAd/g)) {
-      if (e.message === 'my account') {
-        document.getElementById('logged-out').classList.add('d-none');
-        document.getElementById('logged-in').classList.remove('d-none');
-      } else {
-        document.getElementById('logged-out').classList.remove('d-none');
-        document.getElementById('logged-in').classList.add('d-none');
-      }
-    }
-    document.querySelector('#fav-counter').innerHTML = e.data.details.favourite.length-1;
+    // if (location.href.toString().match(/index|adsList|oneAd/g)) {
+    //   if (e.message === 'my account') {
+    //     document.getElementById('logged-out').classList.add('d-none');
+    //     document.getElementById('logged-in').classList.remove('d-none');
+    //   } else {
+    //     document.getElementById('logged-out').classList.remove('d-none');
+    //     document.getElementById('logged-in').classList.add('d-none');
+    //   }
+    // }
+    document.querySelector('#fav-counter').innerHTML = e.data.details.favourite.length;
+    let oneFav;
+    if(e.data.details.favourite < 1){
+      oneFav =`<p class ="align-center">No items found</p>`
+    }else{
+      
+    e.data.details.favourite.forEach(favOne => {
+      oneFav +=`
+      <li id="${favOne.id}" class="fav-item">
+          <img  src="${favOne.imageurl[0]}">
+          <div class="flex-y  align-center">
+              <p class="margin-1">${favOne.type}</p>
+              <small>$${favOne.price}</small>
+              <span  class="badge del-item">x</span>
+          </div>
+      </li>
+      `
+    });
+  }
+    document.querySelector('#favorite-list').innerHTML = oneFav;
+    // if (!e.data.details.avatar) favOne.imageurl[0] = `./assets/img/user.svg`
     document.getElementById('avatar').src = e.data.details.avatar;
     document.getElementById('nav-avatar').src = e.data.details.avatar;
     let ads = '';
@@ -102,32 +179,6 @@ function patchProperty() {
     });
 }
 
+// add property to favourite
 
-window.addEventListener('load', function () {
-  const favs = document.querySelectorAll(".fav-btn")
 
-  for(var i = 0; i < favs.length; i++){
-      favs[i].addEventListener("click", function() {
-      fetch(`${document.api.ads_url}/${this.id}/favourite`,{
-          headers: {
-            authorization: `Bearer ${localStorage.getItem('token')}`,
-            Accept: 'application/json, text/plain , */*',
-              'content-type': 'application/json',
-          }
-        })
-        .then(response => response.json())
-        .then((data) => {
-          if (data.status === 200) {
-            agentAccess();
-            document.querySelector('.color').classList.add('green');
-            document.querySelector('#signup').classList.remove('visible');
-            document.getElementById('flash-txt').innerHTML = data.error || data.message;
-          } else {
-            errorMe();
-            document.querySelector('.color').classList.add('red');
-            document.getElementById('flash-txt').innerHTML = data.error || data.message;
-          }
-        });
-    })
-  }
-});
