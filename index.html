@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +8,18 @@
     <title>Property-lite</title>
 </head>
 <body id="loader" class="loader white ">
-    <div id="bg"></div>
     <!-- start of navigation -->
-    <nav class="flex-x shadow padding-y-1 full-width">
+    <nav class="flex-x flex-y-center fixed-top shadow padding-y-1 full-width">
             <div class="logo margin-l-3"><a href="index.html">P<span class="tracking-in-contract">roperty Pro</span></a></div>
             <!-- navigation -->
             <div id="logged-out" class="margin-l-auto margin-r-3 d-flex">
                 <div class="d-flex">
-                    <button onclick="signin()" class="btn teal white-txt btn-lg margin-l-4">signin</button>
-                    <button onclick="signup()" class="btn white blue-txt btn-lg margin-l-4">signup</button>
+                    <button onclick="signin()" class="btn teal white-txt  margin-l-4">signin</button>
+                    <button onclick="signup()" class="btn white blue-txt  margin-l-4">signup</button>
                 </div>
             </div>
             
-            <div class="margin-l-auto margin-r-3 flex-x">
+            <div id="logged-in"  class="d-none margin-l-auto margin-r-3 flex-x">
                     <button class="collapsible btn fav">
                         <span class="fav-dis flex-y-center">
                             <i id="love" class="pro-like-lite"></i>
@@ -45,7 +44,7 @@
             </div>
         </nav>
     <!-- //navigation -->
-    <main role="main">
+    <main id="myFrame" role="main">
         <div class="flex-y margin-b-6">
             <div class="landing d-flex full-width">
                 <div class="left-side  margin-t-1 margin-l-3">
@@ -119,6 +118,12 @@
     <script src="assets/js/fetch/auth.js"></script>
     <script src="./assets/js/fetch/landing-ads.js"></script>
     <script src="./assets/js/fetch/my-account.js"></script>
+
+    <!-- <script src="./assets/js/fetch/fav.js"></script> -->
+    <script src="./assets/js/fetch/ads-list.js"></script>
+    <!-- <script src="./assets/js/fetch/my-account.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtdJ2lMzLN7jGl_KHHWv1UvXrhqExiSUM&libraries=places&callback=initAutocomplete" async defer></script>
+    <script src="./assets/js/app.js"></script> -->
     
 </body>
 </html>

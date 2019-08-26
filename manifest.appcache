@@ -1,0 +1,11 @@
+CACHE MANIFEST
+#DATE 2019-08-25
+CACHE:
+assets/css/app.css
+assets/js/app.js
+
+NETWORK:
+*
+
+FALLBACK:
+#static.html

@@ -35,8 +35,9 @@ function createUser(e) {
         document.querySelector('.color').classList.add('green');
         document.querySelector('#signup').classList.remove('visible');
         document.getElementById('flash-txt').innerHTML = data.message;
+        location.reload()
         if (data.data.isAgent === true) {
-          agentAccess();
+          flashMessage();
         } else {
           userAccess();
         }
@@ -71,8 +72,9 @@ body: JSON.stringify({
         document.querySelector('.color').classList.add('green');
         document.querySelector('#signup').classList.remove('visible');
         document.getElementById('flash-txt').innerHTML = data.message;
+        location.reload()
         if (JSON.parse(data.data.isAgent) === true) {
-          agentAccess();
+          flashMessage();
         } else {
           userAccess();
         }

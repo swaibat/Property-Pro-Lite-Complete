@@ -149,7 +149,8 @@ background-image: linear-gradient(to bottom ,rgba(45, 45, 45, 0.3),rgb(4, 4, 4))
 
 .modal-btn {
   width: 50%;
-  border-left: 1px solid #dddddd;
+  border-left: 1px solid #dddddd !important;
+  border-radius: 0 !important;
 }
 
 .modal-title {
@@ -164,7 +165,6 @@ background-image: linear-gradient(to bottom ,rgba(45, 45, 45, 0.3),rgb(4, 4, 4))
 
 table {
   width: 100%;
-  max-width: 1200px;
   font: 16px Arimo, Arial, "Helvetica Neue", Helvetica, sans-serif;
   border-collapse: collapse;
   border-radius: 10px;

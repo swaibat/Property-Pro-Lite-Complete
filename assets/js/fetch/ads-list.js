@@ -10,6 +10,7 @@ fetch(document.api.ads_url)
     document.querySelector('#all-ads').innerHTML = ads;
   });
 
+// add property to favourite
 window.addEventListener('load', function () {
     const favs = document.querySelectorAll(".fav-btn")
 
@@ -24,20 +25,20 @@ window.addEventListener('load', function () {
           })
           .then(response => response.json())
           .then((data) => {
-            if (data.status !== 200) {
-              
+            console.log(data)
+            if (data.status === 200) {
               const counter = document.querySelector('#fav-counter');
               // errorMe();
               // document.querySelector('.color').classList.add('red');
               // document.getElementById('flash-txt').innerHTML = data.error || data.message;
-              const flyingImgs = document.querySelector('.b-flying-img');
-              flyingImgs.classList.remove('d-none');
+              // const flyingImgs = document.querySelector('.b-flying-img');
+              // flyingImgs.classList.remove('d-none');
               setTimeout(() => {
                 // favImg.src = img
                 // love.classList.add('invisible')
                 // favImg.classList.remove('invisible')
                 // el.parentNode.removeChild(flyingImg);
-                flyingImgs.classList.remove('d-none');
+                // flyingImgs.classList.remove('d-none');
                 counter.textContent ++
             }, 1000);
             }

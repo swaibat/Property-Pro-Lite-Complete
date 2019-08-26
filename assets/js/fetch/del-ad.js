@@ -12,7 +12,7 @@ function delProperty() {
     .then(response => response.json())
     .then((data) => {
       if (data.status === 200) {
-        agentAccess();
+        flashMessage();
         document.querySelector('.color').classList.add('green');
         document.querySelector('#signup').classList.remove('visible');
         document.getElementById('flash-txt').innerHTML = data.message;
@@ -37,7 +37,7 @@ function patchProperty() {
     .then(response => response.json())
     .then((data) => {
       if (data.status === 200) {
-        agentAccess();
+        flashMessage();
         document.querySelector('.color').classList.add('green');
         document.querySelector('#signup').classList.remove('visible');
         document.getElementById('flash-txt').innerHTML = data.error || data.message;

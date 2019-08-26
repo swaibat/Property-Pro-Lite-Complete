@@ -74,12 +74,12 @@ function userAccess(){
   setTimeout(userRoutes, 2000);
 }
 
-function agentAccess(){
+function flashMessage(){
   document.querySelector('#flash').classList.remove('d-none');
-  setTimeout(agentRoutes, 2000);
+  setTimeout(flashMessageHide, 2000);
 }
 
- function agentRoutes() {
+ function flashMessageHide() {
   document.querySelector('#flash').classList.add('d-none');
   // location.replace("dashboard.html")
 }
