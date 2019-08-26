@@ -3,9 +3,6 @@
 /*  Small devices*/
 
 @media (max-width: 576px) {
-    .card {
-        width: 100% !important;
-    }
     .left-cards{
         width: 100% !important;
     }
@@ -24,9 +21,6 @@
 }
 
 @media (max-width: 768px) {
-    .card {
-        width: 46.1%;
-    }
     .left-cards{
         width: 46.1%;
     }
@@ -102,9 +96,6 @@
     .drop-content {
         margin: 3.3rem 0 0 -5.9rem !important;
     }
-    .card {
-        width: 46.1%;
-    }
     .product-form{
         flex-direction: column !important;
     }
@@ -140,10 +131,6 @@
         padding:.5rem;
         margin-bottom: 2rem;
       }
-      .page-title{
-        margin-left: 1rem;
-        margin-right: 1rem;
-      }
       .slider-holder{
         width: 100% !important;
     }
@@ -160,14 +147,7 @@
         flex-wrap: wrap;
       }
 }
-@media (max-width: 992px) {
-
-}
-
 @media (min-width: 1200px) {
-    .card {
-        width: 23%;
-    }
     .product-form .preview-img {
         width: 45%;
     }

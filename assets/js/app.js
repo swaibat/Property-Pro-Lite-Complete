@@ -1,3 +1,4 @@
+
 var i, acc = document.getElementsByClassName("collapsible");
     for (i = 0; i < acc.length; i++) acc[i].addEventListener("click", function() {
         var e = this.nextElementSibling;
@@ -9,14 +10,15 @@ var atto = document.createAttribute("id");
   atto.value = "flash";
 var element = document.querySelector('footer');
 element.appendChild(para).setAttributeNode(atto)
-document.querySelector('#flash').classList.add('flash')
+document.querySelector('#flash').classList.add("flash")
 document.querySelector('#flash').classList.add('d-none')
 document.querySelector('#flash').innerHTML=`
 <div  class="color"></div>
 <span id="flash-txt" class="text"></span>`
 window.addEventListener('load', function () {
-  });
   document.getElementById("loader").classList.remove("loader");
+  });
+  
   function toggle() {
     document.getElementById("collapse-menu").classList.toggle("toggle-class")
     }
@@ -72,12 +74,12 @@ function userAccess(){
   setTimeout(userRoutes, 2000);
 }
 
-function agentAccess(){
+function flashMessage(){
   document.querySelector('#flash').classList.remove('d-none');
-  setTimeout(agentRoutes, 2000);
+  setTimeout(flashMessageHide, 2000);
 }
 
- function agentRoutes() {
+ function flashMessageHide() {
   document.querySelector('#flash').classList.add('d-none');
   // location.replace("dashboard.html")
 }
@@ -203,12 +205,10 @@ photoUpload.onchange = function () {
   }
 };
 
-function latest() {
-  window.scrollTo(0, 1000);
-}
 function featured() {
   window.scrollTo(0, 450);
 }
 function popular() {
   window.scrollTo(0, 900);
 }
+

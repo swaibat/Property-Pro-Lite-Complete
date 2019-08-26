@@ -8,7 +8,7 @@ function createProperty(e) {
     const state = document.getElementById('administrative_area_level_1').value;
     const type = document.querySelector('#type').value;
     const imageUrl = document.getElementById('photo-upload').value;
-    fetch(`http://localhost:3000/api/v2/property/${JSON.parse(location.href.split('=')[1])}`, {
+    fetch(`${document.api.ads_url}/${JSON.parse(location.href.split('=')[1])}`, {
             method: 'PATCH',
             headers: {
                 authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -38,7 +38,8 @@ function createProperty(e) {
         });
 }
 
-fetch(`http://localhost:3000/api/v2/property/${JSON.parse(location.href.split('=')[1])}`)
+// update property
+fetch(`${document.api.ads_url}/${JSON.parse(location.href.split('=')[1])}`)
   .then((response) => response.json())
   .then((e) => {
     if (e.status === 404) document.getElementById('holder').innerHTML = data.error;

@@ -19,7 +19,18 @@
                 <button onclick="signup()" class="btn white blue-txt btn-lg margin-l-4">signup</button>
             </div>
         </div>
-        <div id="logged-in" class="d-none margin-l-auto margin-r-3 flex-x">
+        
+        <div class="margin-l-auto margin-r-3 flex-x">
+                <button class="collapsible btn fav">
+                    <span class="fav-dis flex-y-center">
+                        <i id="love" class="pro-like-lite"></i>
+                        <img class="fav-img invisible" src="">
+                        <span id="fav-counter" class="badge">0</span>
+                    </span>
+                </button>
+                <ul id="favorite-list"  class="drop-content favorite-list swing-in-top-fwd white d-none padding-2 shadow">
+                        <!-- favourite list -->
+                        </ul>
             <button id="avatar" class="collapsible padding-t-1 d-flex btn">
                 <span class="padding-r-2 margin-t-1">My account</span>
                 <img id="nav-avatar" class="circle" src="./assets/img/user.svg" height="35" width="35" alt="user">
@@ -28,6 +39,7 @@
                 <li class="padding-y-2"><i class="pro-enter-lite margin-x-2"></i>my account</li>
                 <li class="padding-y-2"><a><i class="pro-info-lite margin-x-2"></i>profile</a></li>
                 <li class="padding-y-2"><a><i class="pro-cog-lite margin-x-2"></i>Setting</a></li>
+                <li class="padding-y-2"><a href="index.html"><i class="pro-switch-lite margin-x-2"></i>Logout</a></li>
             </ul>
             <button type="button" onclick="toggle()" class="btn mobile-view"><span class="humberger">&#8942;</span></button>
         </div>
@@ -36,18 +48,83 @@
     <!-- start of main content -->
     <main role="main">
         <div class="padding-1 page-container ">
-            <h3 class="page-title margin-l-2"><i class="pro-stack-lite margin-r-2"></i> All property</h3>
+            <div class="wrap-title flex-y-center margin-x-2">
+                <h3 class="page-title margin-l-1"><i class="pro-stack-lite margin-r-2"></i>property</h3>
+                <form class="margin-l-auto d-flex" autocomplete="off">
+                    <div class="autocomplete">
+                        <input id="city-search" type="text" onkeyup="myFunction()" placeholder="Quick seach ...">
+                    </div>
+                    <select id="types" onchange="myFunctionTwo()">
+                        <option value="singlerooms">singlerooms</option>
+                        <option value="3bedrooms">3bedrooms</option>
+                        <option value="5bedrooms">5bedrooms</option>
+                        <option value="miniflat">miniFlat</option>
+                        <option value="others">others</option>
+                    </select>
+                    <a class="btn teal"><i class="pro-search-lite margin-r-1"></i></a>
+                </form>
+            </div>
             <div class="sub-container margin-2">
-                <div id="ads" class="card-wrapper flex-center"></div>
+                <div id="all-ads" class="main">
+              
+                </div>
+                <div class="align-center margin-y-3" id="pagination">
+                    <a class="btn blue" href="javascript:prevPage()" id="btn_prev">Prev</a>
+                    <span class="btn blue-txt">page: <span id="page"></span></span>
+                    <a class="btn blue" href="javascript:nextPage()" id="btn_nex">Next</a>  
+                </div>
             </div>
         </div>
     </main>
+    <!-- <script src="./assets/js/fetch/pagination.js"></script> -->
+    <script>
+        function myFunction() {
+            // Declare variables
+            var input, filter, adsList, oneAd, a, b,val, i, txtValue;
+            input = document.getElementById('city-search');
+            filter = input.value.toUpperCase();
+            adsList = document.getElementById("all-ads");
+            oneAd = adsList.getElementsByClassName('card');
+
+            for (i = 0; i < oneAd.length; i++) { 
+            a = oneAd[i].getElementsByTagName("p")[0]
+            b = oneAd[i].querySelectorAll("#city")[0]
+            txtValue = b.textContent;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                oneAd[i].style.display = "";
+            } else {
+                oneAd[i].style.display = "none";
+            }
+         }
+        }
+
+        function myFunctionTwo() {
+            // Declare variables
+            var input, filter, adsList, oneAd, a, b,val, i, txtValue;
+            input = document.getElementById('types');
+            filter = input.value.toUpperCase();
+            adsList = document.getElementById("all-ads");
+            oneAd = adsList.getElementsByClassName('card');
+            for (i = 0; i < oneAd.length; i++) { 
+            a = oneAd[i].getElementsByTagName("p")[0]
+            txtValue = a.textContent;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                oneAd[i].style.display = "";
+            } else {
+                oneAd[i].style.display = "none";
+            }
+         }
+        }
+     </script>
+     <script src="./assets/js/fetch/fav.js"></script>
     <footer class="footer white">
         <a class="margin-r-4">Property-lite 2019</a>
     </footer>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtdJ2lMzLN7jGl_KHHWv1UvXrhqExiSUM&libraries=places&callback=initAutocomplete" async defer></script>
+    <script src="./assets/js/fetch/variables.js"></script>
     <script src="./assets/js/fetch/ads-list.js"></script>
+    <script src="./assets/js/fetch/my-account.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtdJ2lMzLN7jGl_KHHWv1UvXrhqExiSUM&libraries=places&callback=initAutocomplete" async defer></script>
     <script src="./assets/js/app.js"></script>
-    <!-- <script src="./assets/js/fetch/my-account.js"></script> -->
+    
 </body>
 </html>

@@ -4,15 +4,11 @@
 /* product card */
 
 .card {
-  width: 30%;
-  min-width: 200px;
   border: solid 1px rgb(238, 237, 237);
   margin: 10px;
   box-shadow: var(--shadow);
   border-radius: .7rem;
-  overflow: hidden;
   background: white;
-  
   position: relative;
 }
 
@@ -37,8 +33,9 @@ background-image: linear-gradient(to bottom ,rgba(45, 45, 45, 0.3),rgb(4, 4, 4))
 }
 
 .card .btn {
-  border: solid 1px gainsboro;
+  border-left: solid 1px gainsboro;
   line-height: 1.5;
+  border-radius: 0rem;
 }
 
 .card .price-tag {
@@ -49,17 +46,19 @@ background-image: linear-gradient(to bottom ,rgba(45, 45, 45, 0.3),rgb(4, 4, 4))
   border-radius: 1px 1px 10px 10px;
   margin-left: 10px;
   z-index: 1;
+  font-size: small;
 }
 
 .card img {
-  height: 150px !important;
+  height: 150px;
   cursor: pointer;
   width: 100%;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 .ad-hero{
   position: absolute;
-  margin-top: -1.3rem;
+  margin-top: -1.6rem;
   color: #f4f2f2;
   width: 100%;
   left: 0;
@@ -71,25 +70,8 @@ background-image: linear-gradient(to bottom ,rgba(45, 45, 45, 0.3),rgb(4, 4, 4))
   transform: scale(1.1);
 }
 
-.card img:before {
-  content: '';
-position: absolute;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-background-image: linear-gradient(to bottom ,rgba(130, 121, 108, 0.3),rgba(130, 121, 108, 1));
-background-image: linear-gradient(180deg,
-  rgba(130, 121, 108,  0) 0%,
-  rgba(130, 121, 108,  0) 80%,
-  rgba(130, 121, 108, .6) 90%,
-  rgba(130, 121, 108,  1) 100%
-);
-}
-
 .card-foot {
-  padding: 0.01em 10px;
-  box-shadow: 0 4px 30px 0 rgba(4, 4, 4, 0.99), 0 4px 40px 0 rgba(0, 0, 0, 0.19);
+  padding: .4rem 0 0.4rem .5rem;
 }
 
 .price {
@@ -97,11 +79,6 @@ background-image: linear-gradient(180deg,
   background: var(--teal);
   border-radius: 0 0 0 1rem;
   color: white;
-}
-
-.card .card-footer {
-  box-shadow: var(--shadow-top);
-  padding: 10px;
 }
 
 
@@ -172,7 +149,8 @@ background-image: linear-gradient(180deg,
 
 .modal-btn {
   width: 50%;
-  border-left: 1px solid #dddddd;
+  border-left: 1px solid #dddddd !important;
+  border-radius: 0 !important;
 }
 
 .modal-title {
@@ -187,7 +165,6 @@ background-image: linear-gradient(180deg,
 
 table {
   width: 100%;
-  max-width: 1200px;
   font: 16px Arimo, Arial, "Helvetica Neue", Helvetica, sans-serif;
   border-collapse: collapse;
   border-radius: 10px;
@@ -301,12 +278,6 @@ th {
       font-weight: normal;
       font-size: 12px;
   }
-}
-
-.badge {
-  padding: .5rem;
-  background: #c2c2c2;
-  color: #fff;
 }
 
 .value-holder {

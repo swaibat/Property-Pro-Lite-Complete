@@ -17,8 +17,8 @@
 	}
 }
 .loader .logo a,.loader li,.loader button,.loader .green,.loader h2,.loader .form-input,.loader img,.loader .card .btn,.loader .price,
-.loader p,.loader h4,.loader span,.loader i,
-.loader #navAccordion i,.loader .active,.loader .d-flex.float-right.margin-t-2 a,.loader h1,.loader b,.loader li q{
+.loader p,.loader h4,.loader .teal-txt,.loader h3.align-center,.loader .white.shadow.price-tag,.loader span,.loader i,
+.loader #navAccordion i,.loader .page,.loader .btn,.loader .page-title,.loader .active,.loader .d-flex.float-right.margin-t-2 a,.loader .btn.blue,.loader h1,.loader b,.loader li q{
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
 	animation-iteration-count: infinite;
@@ -38,7 +38,6 @@
 	border-radius: 50%;
 	width: 35px;
 	height: 35px;
-	/* margin-right: 10px; */
 }
 
 .loader .hamburger-toggle * {
@@ -46,9 +45,16 @@
 	padding: 3px;
 }
 
-.loader .table-striped tbody tr:nth-of-type(2n+1),
+.loader .card-body::after, .loader .table-striped tbody tr:nth-of-type(2n+1),
 .loader .alert * {
-	background: none;
+	background: none !important;
+}
+.loader span.shadow{
+	box-shadow: none;
+}
+.loader .card-foot {
+	border-top: solid 1px gainsboro;
+	box-shadow: none;
 }
 
 .loader .progress *,
