@@ -1,6 +1,6 @@
 document.api = {};
-document.api.ads_url ='http://localhost:3000/api/v2/property';
-document.api.users_url ='http://localhost:3000/api/v2/users';
+document.api.ads_url ='https://prop-pro.herokuapp.com/api/v2/property';
+document.api.users_url ='https://prop-pro.herokuapp.com/api/v2/users';
 document.api.ad = (ad)=> {
     return `
         <div class="card">
