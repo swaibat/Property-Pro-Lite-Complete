@@ -37,7 +37,7 @@ function createUser(e) {
         document.getElementById('flash-txt').innerHTML = data.message;
         location.reload()
         if (data.data.isAgent === true) {
-          flashMessage();
+          agentRoute();
         } else {
           userAccess();
         }
@@ -54,7 +54,7 @@ function userSignin(e) {
   e.preventDefault();
   const email = document.getElementById('email').value;
   const password = document.querySelector('#password').value;
-  fetch('http://localhost:3000/api/v2/users/auth/signin', {
+  fetch(`${document.api.users_url}/auth/signin`, {
 method: 'POST',
 headers: {
   Accept: 'application/json, text/plain , */*',
