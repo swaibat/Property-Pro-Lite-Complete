@@ -79,14 +79,24 @@ function flashMessage(){
   setTimeout(flashMessageHide, 2000);
 }
 
+function agentRoute(){
+  document.querySelector('#flash').classList.remove('d-none');
+  setTimeout(agentRoutes, 2000);
+}
+
  function flashMessageHide() {
   document.querySelector('#flash').classList.add('d-none');
-  // location.replace("dashboard.html")
+}
+
+
+function agentRoutes() {
+  document.querySelector('#flash').classList.add('d-none');
+  location.replace("dashboard.html")
 }
 
 function userRoutes() {
   document.querySelector('#flash').classList.add('d-none');
-  // location.replace("adsList.html")
+  location.replace("adsList.html")
 } 
 
 function report(){
